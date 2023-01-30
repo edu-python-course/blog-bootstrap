@@ -80,9 +80,6 @@
 .form-auth .form-floating:focus-within {
   z-index: 2;
 }
-.form-auth .btn[type=submit] {
-  margin-top: 20px;
-}
 
 .form-auth.form-signin #password {
   border-bottom-left-radius: 1rem;
