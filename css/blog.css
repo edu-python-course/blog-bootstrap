@@ -57,31 +57,4 @@
   height: 25rem;
 }
 
-.form-auth {
-  max-width: 330px;
-  padding: 15px;
-}
-
-.form-auth {
-  height: 100%;
-  display: block;
-  align-items: center;
-  text-align: center;
-  max-width: 300px;
-  padding: 15px;
-}
-.form-auth .form-floating:focus-within {
-  z-index: 2;
-}
-.form-auth input[type=password] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-.form-auth input[type=email] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
 /*# sourceMappingURL=blog.css.map */
