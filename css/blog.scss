@@ -60,3 +60,43 @@
 .carousel-item {
   height: 25rem;
 }
+
+.form-auth {
+  max-width: 330px;
+  padding: 15px;
+}
+
+.form-auth {
+  height: 100%;
+  display: block;
+  align-items: center;
+  text-align: center;
+  max-width: 300px;
+  padding: 15px;
+
+  input {
+    border-radius: 0;
+  }
+
+  input#username {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+
+  .form-floating:focus-within {
+    z-index: 2;
+  }
+}
+
+.form-auth.form-signin {
+  #password {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+}
+.form-auth.form-signup {
+  #confirmPassword {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+}
