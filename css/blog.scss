@@ -1,8 +1,14 @@
 .blog-header {
   border-bottom: 2px solid #e5e5e5;
+
   .logo {
     height: 2.75rem;
     width: 2.75rem;
+  }
+
+  .avatar {
+    max-height: 12vh;
+    max-width: 12vw;
   }
 }
 
@@ -15,9 +21,20 @@
   }
 }
 
-header {
-  .avatar {
-    max-height: 12vh;
-    max-width: 12vw;
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+
+  .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
   }
 }
