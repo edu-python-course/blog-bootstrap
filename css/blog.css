@@ -2,12 +2,12 @@
   border-bottom: 2px solid #e5e5e5;
 }
 .blog-header .logo {
-  height: 2.75rem;
-  width: 2.75rem;
+  max-height: 2.75rem;
+  max-width: 2.75rem;
 }
 .blog-header .avatar {
-  max-height: 12vh;
-  max-width: 12vw;
+  max-height: 2.75rem;
+  max-width: 2.75rem;
 }
 
 .blog-title {
