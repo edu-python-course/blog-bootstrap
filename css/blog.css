@@ -41,7 +41,7 @@
 
 .social {
   font-size: 2.75rem;
-  color: var(--bs-dark);
+  color: var(--bs-body-color);
 }
 
 .carousel {
