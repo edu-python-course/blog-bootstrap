@@ -1,0 +1,22 @@
+.blog-header {
+  border-bottom: 2px solid #e5e5e5;
+}
+.blog-header .logo {
+  height: 2.75rem;
+  width: 2.75rem;
+}
+
+.blog-title {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-size: 2.25rem;
+}
+.blog-title:hover {
+  text-decoration: none;
+}
+
+header .avatar {
+  max-height: 12vh;
+  max-width: 12vw;
+}
+
+/*# sourceMappingURL=blog.css.map */
