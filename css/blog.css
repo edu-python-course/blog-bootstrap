@@ -44,4 +44,17 @@
   color: var(--bs-dark);
 }
 
+.carousel {
+  margin-bottom: 4rem;
+}
+
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+.carousel-item {
+  height: 25rem;
+}
+
 /*# sourceMappingURL=blog.css.map */
