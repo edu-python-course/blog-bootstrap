@@ -91,4 +91,12 @@
   border-bottom-right-radius: 1rem;
 }
 
+.blog-pagination {
+  margin-bottom: 2rem;
+}
+.blog-pagination .btn {
+  margin-left: 1rem;
+  width: 5rem;
+}
+
 /*# sourceMappingURL=blog.css.map */
