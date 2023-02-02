@@ -94,6 +94,7 @@
     border-bottom-right-radius: 1rem;
   }
 }
+
 .form-auth.form-signup {
   #confirmPassword {
     border-bottom-left-radius: 1rem;
@@ -103,8 +104,42 @@
 
 .blog-pagination {
   margin-bottom: 2rem;
-  .btn {
-    margin-left: 1rem;
-    width: 5rem;
+
+}
+
+.avatar {
+  max-height: 10rem;
+  max-width: 10rem;
+}
+
+.profile-image {
+  max-height: 400px;
+  max-width: 400px;
+}
+
+.blogpost-comment {
+  margin-bottom: 0.75rem;
+
+  .avatar {
+    max-height: 7rem;
+    max-width: 7rem;
+  }
+
+  div {
+    strong {
+      margin-bottom: 0.5rem;
+    }
+
+    div {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .bi-calendar {
+    margin-right: 0.5rem;
   }
 }
+
+.profile-action {
+  display: block;
+  width: 100%;

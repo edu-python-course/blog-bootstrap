@@ -25,32 +25,32 @@
         <a href="homepage.html" class="blog-title text-dark">Django Blog</a>
       </div>
       <div class="col-4 d-flex justify-content-end align-items-center dropdown">
-        <div class="btn-group">
-          <button type="button" class="btn btn-secondary">Authenticate</button>
-          <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
-                  data-bs-toggle="dropdown" aria-expanded="false">
-            <span class="visually-hidden">Toggle Dropdown</span>
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="signin.html">Sign In</a></li>
-            <li><a class="dropdown-item" href="signup.html">Sign Up</a></li>
-          </ul>
+        <div class="dropdown-toggle" data-bs-toggle="dropdown">
+          <img src="https://i.pravatar.cc/350?u=da594f2b" alt="avatar" class="avatar rounded-circle">
         </div>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="profile.html" class="dropdown-item">User Profile</a></li>
+          <li><a href="" class="dropdown-item">Create post</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a href="" class="dropdown-item">Logout</a></li>
+        </ul>
       </div>
     </div>
   </header>
   <div class="nav-scroller py-1 mb-3">
     <nav class="nav d-flex justify-content-between">
-      <div class="nav-item"><a href="" class="nav-link link-secondary">Category1</a></div>
-      <div class="nav-item"><a href="" class="nav-link link-secondary">Category2</a></div>
-      <div class="nav-item"><a href="" class="nav-link link-secondary">Category3</a></div>
-      <div class="nav-item"><a href="" class="nav-link link-secondary">Category4</a></div>
-      <div class="nav-item"><a href="" class="nav-link link-secondary">Category5</a></div>
-      <div class="nav-item"><a href="" class="nav-link link-secondary">Category6</a></div>
-      <div class="nav-item"><a href="" class="nav-link link-secondary">Category7</a></div>
-      <div class="nav-item"><a href="" class="nav-link link-secondary">Category8</a></div>
-      <div class="nav-item"><a href="" class="nav-link link-secondary">Category9</a></div>
-      <div class="nav-item"><a href="" class="nav-link link-secondary">Category10</a></div>
+      <div class="nav-item"><a href="homepage.html" class="nav-link link-secondary">Category1</a></div>
+      <div class="nav-item"><a href="homepage.html" class="nav-link link-secondary">Category2</a></div>
+      <div class="nav-item"><a href="homepage.html" class="nav-link link-secondary">Category3</a></div>
+      <div class="nav-item"><a href="homepage.html" class="nav-link link-secondary">Category4</a></div>
+      <div class="nav-item"><a href="homepage.html" class="nav-link link-secondary">Category5</a></div>
+      <div class="nav-item"><a href="homepage.html" class="nav-link link-secondary">Category6</a></div>
+      <div class="nav-item"><a href="homepage.html" class="nav-link link-secondary">Category7</a></div>
+      <div class="nav-item"><a href="homepage.html" class="nav-link link-secondary">Category8</a></div>
+      <div class="nav-item"><a href="homepage.html" class="nav-link link-secondary">Category9</a></div>
+      <div class="nav-item"><a href="homepage.html" class="nav-link link-secondary">Category10</a></div>
     </nav>
   </div>
 </div>
@@ -111,8 +111,8 @@
 <main class="container">
   <div class="row">
     <section class="col-md-9 mb-2" role="main">
-      <h1 class="h1">hydras volare!</h1>
       <div class="row position-relative">
+        <h1 class="h1">hydras volare!</h1>
         <article class="col w-100">
           <div class="mb-3">
             <strong class="fw-light">category</strong>
@@ -144,7 +144,7 @@
             minus quia quos saepe suscipit totam. Accusamus cum exercitationem harum id itaque, officia quos ullam
             voluptatem.
           </p>
-                    <p>
+          <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto dicta, ea esse excepturi ipsa
             laudantium libero molestias officiis quas quidem quisquam ratione? Dolores est, iste laborum pariatur ullam
             vitae? Atque?
@@ -167,7 +167,7 @@
             minus quia quos saepe suscipit totam. Accusamus cum exercitationem harum id itaque, officia quos ullam
             voluptatem.
           </p>
-                    <p>
+          <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto dicta, ea esse excepturi ipsa
             laudantium libero molestias officiis quas quidem quisquam ratione? Dolores est, iste laborum pariatur ullam
             vitae? Atque?
@@ -192,6 +192,80 @@
           </p>
         </article>
       </div>
+      <h2 class="h2">Comments</h2>
+      <form class="row position-relative" id="BlogpostCommentForm">
+        <div class="col-12 d-flex justify-content-between align-items-center mb-3">
+          <h3 class="h3">New comment</h3>
+          <button type="submit" class="btn btn-outline-primary"><i class="bi bi-send"></i>&nbsp;Post</button>
+        </div>
+        <div class="col-12 d-flex justify-content-start mb-3">
+          <img src="https://i.pravatar.cc/350?u=da594f2b" alt="avatar" class="avatar rounded-circle p-2">
+          <label for="newCommentText" class="visually-hidden">Comment Text</label>
+          <textarea name="message" id="newCommentText" class="form-control" required></textarea>
+        </div>
+      </form>
+      <div class="row position-relative" id="BlogpostCommentsContainer">
+        <div class="blogpost-comment col-12 d-flex">
+          <img src="https://i.pravatar.cc/350?u=4001b435" alt="avatar" class="avatar rounded-circle p-2">
+          <div>
+            <strong class="mb-2 h4">John Doe</strong>
+            <div>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aperiam beatae dolorem iure molestiae
+              molestias quis quisquam reprehenderit! A animi assumenda autem blanditiis ea esse hic magnam officia
+              praesentium quam.
+            </div>
+            <small class="small text-muted"><i class="bi bi-calendar"></i>Jan 31, 2023</small>
+          </div>
+        </div>
+        <div class="blogpost-comment col-12 d-flex">
+          <img src="https://i.pravatar.cc/350?u=4001b435" alt="avatar" class="avatar rounded-circle p-2">
+          <div>
+            <strong class="mb-2 h4">John Doe</strong>
+            <div>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aperiam beatae dolorem iure molestiae
+              molestias quis quisquam reprehenderit! A animi assumenda autem blanditiis ea esse hic magnam officia
+              praesentium quam.
+            </div>
+            <small class="small text-muted"><i class="bi bi-calendar"></i>Jan 31, 2023</small>
+          </div>
+        </div>
+        <div class="blogpost-comment col-12 d-flex">
+          <img src="https://i.pravatar.cc/350?u=4001b435" alt="avatar" class="avatar rounded-circle p-2">
+          <div>
+            <strong class="mb-2 h4">John Doe</strong>
+            <div>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aperiam beatae dolorem iure molestiae
+              molestias quis quisquam reprehenderit! A animi assumenda autem blanditiis ea esse hic magnam officia
+              praesentium quam.
+            </div>
+            <small class="small text-muted"><i class="bi bi-calendar"></i>Jan 31, 2023</small>
+          </div>
+        </div>
+        <div class="blogpost-comment col-12 d-flex">
+          <img src="https://i.pravatar.cc/350?u=4001b435" alt="avatar" class="avatar rounded-circle p-2">
+          <div>
+            <strong class="mb-2 h4">John Doe</strong>
+            <div>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aperiam beatae dolorem iure molestiae
+              molestias quis quisquam reprehenderit! A animi assumenda autem blanditiis ea esse hic magnam officia
+              praesentium quam.
+            </div>
+            <small class="small text-muted"><i class="bi bi-calendar"></i>Jan 31, 2023</small>
+          </div>
+        </div>
+        <div class="blogpost-comment col-12 d-flex">
+          <img src="https://i.pravatar.cc/350?u=4001b435" alt="avatar" class="avatar rounded-circle p-2">
+          <div>
+            <strong class="mb-2 h4">John Doe</strong>
+            <div>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aperiam beatae dolorem iure molestiae
+              molestias quis quisquam reprehenderit! A animi assumenda autem blanditiis ea esse hic magnam officia
+              praesentium quam.
+            </div>
+            <small class="small text-muted"><i class="bi bi-calendar"></i>Jan 31, 2023</small>
+          </div>
+        </div>
+      </div>
     </section>
     <section class="col-md-3">
       <div class="position-sticky">
@@ -205,18 +279,18 @@
         <div class="ps-4">
           <h4>Archive</h4>
           <ul class="list-unstyled">
-            <li class="text-capitalize"><a href="" class="link-secondary">january 2023</a></li>
-            <li class="text-capitalize"><a href="" class="link-secondary">december 2022</a></li>
-            <li class="text-capitalize"><a href="" class="link-secondary">november 2022</a></li>
-            <li class="text-capitalize"><a href="" class="link-secondary">october 2022</a></li>
-            <li class="text-capitalize"><a href="" class="link-secondary">september 2022</a></li>
-            <li class="text-capitalize"><a href="" class="link-secondary">august 2022</a></li>
-            <li class="text-capitalize"><a href="" class="link-secondary">july 2022</a></li>
-            <li class="text-capitalize"><a href="" class="link-secondary">june 2022</a></li>
-            <li class="text-capitalize"><a href="" class="link-secondary">may 2022</a></li>
-            <li class="text-capitalize"><a href="" class="link-secondary">april 2022</a></li>
-            <li class="text-capitalize"><a href="" class="link-secondary">march 2022</a></li>
-            <li class="text-capitalize"><a href="" class="link-secondary">february 2022</a></li>
+            <li class="text-capitalize"><a href="homepage.html" class="link-secondary">january 2023</a></li>
+            <li class="text-capitalize"><a href="homepage.html" class="link-secondary">december 2022</a></li>
+            <li class="text-capitalize"><a href="homepage.html" class="link-secondary">november 2022</a></li>
+            <li class="text-capitalize"><a href="homepage.html" class="link-secondary">october 2022</a></li>
+            <li class="text-capitalize"><a href="homepage.html" class="link-secondary">september 2022</a></li>
+            <li class="text-capitalize"><a href="homepage.html" class="link-secondary">august 2022</a></li>
+            <li class="text-capitalize"><a href="homepage.html" class="link-secondary">july 2022</a></li>
+            <li class="text-capitalize"><a href="homepage.html" class="link-secondary">june 2022</a></li>
+            <li class="text-capitalize"><a href="homepage.html" class="link-secondary">may 2022</a></li>
+            <li class="text-capitalize"><a href="homepage.html" class="link-secondary">april 2022</a></li>
+            <li class="text-capitalize"><a href="homepage.html" class="link-secondary">march 2022</a></li>
+            <li class="text-capitalize"><a href="homepage.html" class="link-secondary">february 2022</a></li>
           </ul>
         </div>
         <div class="ps-4">
@@ -233,5 +307,6 @@
 </main>
 
 <script src="../js/bootstrap.bundle.js"></script>
+<script src="../js/blog.js"></script>
 </body>
 </html>

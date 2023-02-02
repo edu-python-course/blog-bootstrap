@@ -99,4 +99,34 @@
   width: 5rem;
 }
 
-/*# sourceMappingURL=blog.css.map */
+.avatar {
+  max-height: 10rem;
+  max-width: 10rem;
+}
+
+.profile-image {
+  max-height: 400px;
+  max-width: 400px;
+}
+
+.blogpost-comment {
+  margin-bottom: 0.75rem;
+}
+.blogpost-comment .avatar {
+  max-height: 7rem;
+  max-width: 7rem;
+}
+.blogpost-comment div strong {
+  margin-bottom: 0.5rem;
+}
+.blogpost-comment div div {
+  margin-bottom: 0.5rem;
+}
+.blogpost-comment .bi-calendar {
+  margin-right: 0.5rem;
+}
+
+.profile-action {
+  display: block;
+  width: 100%;
+}
