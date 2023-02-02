@@ -104,21 +104,9 @@
   max-width: 10rem;
 }
 
-.blogpost-comment {
-  margin-bottom: 0.75rem;
-}
 .blogpost-comment .avatar {
   max-height: 7rem;
   max-width: 7rem;
-}
-.blogpost-comment div strong {
-  margin-bottom: 0.5rem;
-}
-.blogpost-comment div div {
-  margin-bottom: 0.5rem;
-}
-.blogpost-comment .bi-calendar {
-  margin-right: 0.5rem;
 }
 
 /*# sourceMappingURL=blog.css.map */
