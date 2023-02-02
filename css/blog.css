@@ -94,10 +94,6 @@
 .blog-pagination {
   margin-bottom: 2rem;
 }
-.blog-pagination .btn {
-  margin-left: 1rem;
-  width: 5rem;
-}
 
 .avatar {
   max-height: 10rem;
@@ -130,3 +126,5 @@
   display: block;
   width: 100%;
 }
+
+/*# sourceMappingURL=blog.css.map */
