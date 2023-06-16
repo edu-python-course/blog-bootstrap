@@ -1,23 +1,30 @@
+/**
+ * Django Blog Main Stylesheet
+ */
+
+// external resources
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
+
+// site header
 .blog-header {
-  border-bottom: 2px solid #e5e5e5;
+  border-bottom-color: #e5e5e5 !important;
 
   .logo {
     max-height: 2.75rem;
-    max-width: 2.75rem;
+    width: auto;
   }
 
-  .avatar {
-    max-height: 2.75rem;
-    max-width: 2.75rem;
+  #headerLogoRight {
+    transform: scaleX(-1); // flip the right one logo horizontally
   }
-}
 
-.blog-title {
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
-  font-size: 2.25rem;
+  .blog-title {
+    font-family: "Pacifico", "Times New Roman", serif;
+    font-size: 3rem;
 
-  &:hover {
-    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
 
