@@ -1,26 +1,10 @@
 {
   "name": "blog-bootstrap",
-  "version": "0.9.2",
+  "version": "1.0.0",
   "private": true,
-  "description": "Bootstrap templates for the Django blog project",
-  "keywords": [
-    "bootstrap",
-    "html",
-    "css",
-    "blog",
-    "template"
-  ],
-  "author": {
-    "name": "Serhii Horodilov",
-    "email": "sgorodil@gmail.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/edu-python-course/blog-bootstrap"
-  },
   "license": "MIT",
-  "dependencies": {
-    "csso-cli": "^4.0.1",
-    "sass": "^1.57.1"
+  "devDependencies": {
+    "csso-cli": "^4.0.2",
+    "sass": "^1.63.4"
   }
 }
