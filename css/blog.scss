@@ -5,6 +5,14 @@
 // external resources
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
 
+// disclaimer
+.disclaimer {
+  color: var(--bs-danger);
+  &:before {
+    content: "DISCLAIMER: ";
+  }
+}
+
 // site header
 .blog-header {
   border-bottom-color: #e5e5e5 !important;
@@ -135,11 +143,4 @@
   font-size: 2.75rem;
   color: var(--bs-body-color);
   margin: 0 1rem;
-}
-
-#disclaimer {
-  &:before {
-    content: "DISCLAIMER: ";
-  }
-  color: var(--bs-danger)
 }
