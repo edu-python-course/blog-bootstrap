@@ -5,12 +5,18 @@
 // external resources
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
 
-// disclaimer
+// general styles
 .disclaimer {
   color: var(--bs-danger);
+
   &:before {
     content: "DISCLAIMER: ";
   }
+}
+
+.avatar {
+  max-height: 10rem;
+  max-width: 10rem;
 }
 
 // site header
@@ -32,6 +38,7 @@
 
     &:hover {
       text-decoration: none;
+      font-size: 2rem;
     }
   }
 }
@@ -55,10 +62,12 @@
   }
 }
 
+// blog sidebar
 .position-sticky {
   top: 2rem;
 }
 
+// auth forms
 .form-auth {
   height: 100%;
   display: block;
@@ -95,16 +104,7 @@
   }
 }
 
-.blog-pagination {
-  margin-bottom: 2rem;
-
-}
-
-.avatar {
-  max-height: 10rem;
-  max-width: 10rem;
-}
-
+// profile page
 .profile-image {
   max-height: 400px;
   max-width: 400px;
@@ -131,11 +131,6 @@
   .bi-calendar {
     margin-right: 0.5rem;
   }
-}
-
-.profile-action {
-  display: block;
-  width: 100%;
 }
 
 // site footer

@@ -9,6 +9,11 @@
   content: "DISCLAIMER: ";
 }
 
+.avatar {
+  max-height: 10rem;
+  max-width: 10rem;
+}
+
 .blog-header {
   border-bottom-color: #e5e5e5 !important;
 }
@@ -25,6 +30,7 @@
 }
 .blog-header .blog-title:hover {
   text-decoration: none;
+  font-size: 2rem;
 }
 
 .nav-scroller {
@@ -77,15 +83,6 @@
   border-bottom-right-radius: 1rem;
 }
 
-.blog-pagination {
-  margin-bottom: 2rem;
-}
-
-.avatar {
-  max-height: 10rem;
-  max-width: 10rem;
-}
-
 .profile-image {
   max-height: 400px;
   max-width: 400px;
@@ -106,11 +103,6 @@
 }
 .blogpost-comment .bi-calendar {
   margin-right: 0.5rem;
-}
-
-.profile-action {
-  display: block;
-  width: 100%;
 }
 
 .social {
