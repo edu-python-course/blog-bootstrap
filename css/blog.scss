@@ -94,6 +94,7 @@ section[aria-label=Sidebar] {
 
   .btn-group-vertical {
     margin: 0.5rem;
+    max-width: 10rem;
   }
 }
 
@@ -156,35 +157,6 @@ article {
   #confirmPassword {
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
-  }
-}
-
-// profile page
-.profile-image {
-  max-height: 400px;
-  max-width: 400px;
-}
-
-.blogpost-comment {
-  margin-bottom: 0.75rem;
-
-  .avatar {
-    max-height: 7rem;
-    max-width: 7rem;
-  }
-
-  div {
-    strong {
-      margin-bottom: 0.5rem;
-    }
-
-    div {
-      margin-bottom: 0.5rem;
-    }
-  }
-
-  .bi-calendar {
-    margin-right: 0.5rem;
   }
 }
 
