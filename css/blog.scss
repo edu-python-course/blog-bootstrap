@@ -17,6 +17,7 @@
 .avatar {
   max-height: 10rem;
   max-width: 10rem;
+  margin: 0.25rem 0;
 }
 
 // site header
@@ -65,6 +66,12 @@
 // blog sidebar
 .position-sticky {
   top: 2rem;
+}
+
+section[aria-label=Sidebar] {
+  h4 {
+    margin-top: 0.5rem;
+  }
 }
 
 // articles
