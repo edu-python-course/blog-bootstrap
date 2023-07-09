@@ -67,6 +67,13 @@
   top: 2rem;
 }
 
+// articles
+article {
+  h1, h2, h3 {
+    font-size: 1.25rem;
+  }
+}
+
 // auth forms
 .form-auth {
   height: 100%;

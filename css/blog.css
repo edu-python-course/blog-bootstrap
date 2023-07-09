@@ -54,6 +54,10 @@
   top: 2rem;
 }
 
+article h1, article h2, article h3 {
+  font-size: 1.25rem;
+}
+
 .form-auth {
   height: 100%;
   display: block;
