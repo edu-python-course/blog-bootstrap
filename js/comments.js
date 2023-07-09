@@ -10,7 +10,7 @@
  */
 const createCommentAuthorBlock = ({name, image}) => {
     const container = document.createElement("div")
-    container.classList.add("text-center", "me-3")
+    container.classList.add("col-3", "text-center")
 
     const authorImage = document.createElement("img")
     authorImage.classList.add("avatar", "rounded-circle", "p-2")
@@ -35,7 +35,7 @@ const createCommentAuthorBlock = ({name, image}) => {
  */
 const createCommentMessageBlock = ({created, message}) => {
     const container = document.createElement("div")
-    container.classList.add("text-start")
+    container.classList.add("col", "text-start")
 
     const messageCreated = document.createElement("small")
     messageCreated.classList.add("fw-light")
@@ -59,7 +59,7 @@ const createCommentMessageBlock = ({created, message}) => {
  */
 const createArticleComment = ({author, comment}) => {
     const container = document.createElement("div")
-    container.classList.add("d-flex", "flex-row")
+    container.classList.add("row", "d-flex", "flex-row")
     container.appendChild(createCommentAuthorBlock(author))
     container.appendChild(createCommentMessageBlock(comment))
 
@@ -73,7 +73,7 @@ const createArticleComment = ({author, comment}) => {
  * @param comment comment data to append
  */
 const addArticleComment = comment => {
-    const container = document.getElementById("ArticleCommentsContainer")
+    const container = document.getElementById("articleCommentsContainer")
     if (container) container.appendChild(comment)
 }
 
@@ -110,5 +110,5 @@ const handleNewCommentSubmit = (event) => {
 
 
 // set event listeners
-const commentForm = document.getElementById("ArticleCommentForm")
+const commentForm = document.getElementById("articleCommentForm")
 if (commentForm) commentForm.addEventListener("submit", handleNewCommentSubmit)

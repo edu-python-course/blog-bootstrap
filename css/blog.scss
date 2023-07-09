@@ -101,7 +101,7 @@ article {
 }
 
 // comments
-#ArticleCommentsContainer {
+#articleCommentsContainer {
   .avatar {
     height: 5rem;
     width: 5rem;
@@ -109,13 +109,12 @@ article {
 
   .flex-row {
     div:first-child {
-      min-width: 7.5rem;
-      max-width: 10rem;
+      width: 7.5rem;
     }
   }
 }
 
-#ArticleCommentForm {
+#articleCommentForm {
   margin-top: 2.5rem;
 }
 
