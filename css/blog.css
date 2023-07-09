@@ -10,9 +10,14 @@
 }
 
 .avatar {
-  max-height: 10rem;
-  max-width: 10rem;
+  max-height: 15rem;
+  max-width: 15rem;
+  width: auto;
   margin: 0.25rem 0;
+}
+
+.btn-group {
+  margin: 1.5rem auto;
 }
 
 .blog-header {
@@ -55,12 +60,18 @@
   -webkit-overflow-scrolling: touch;
 }
 
-.position-sticky {
-  top: 2rem;
+section[aria-label=Sidebar] .position-sticky {
+  top: 1rem;
 }
-
 section[aria-label=Sidebar] h4 {
   margin-top: 0.5rem;
+}
+section[aria-label=Sidebar] .avatar {
+  max-height: 7.5rem;
+  max-width: 7.5rem;
+}
+section[aria-label=Sidebar] .btn-group-vertical {
+  margin: 0.5rem;
 }
 
 article h1, article h2, article h3 {

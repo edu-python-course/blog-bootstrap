@@ -15,9 +15,14 @@
 }
 
 .avatar {
-  max-height: 10rem;
-  max-width: 10rem;
+  max-height: 15rem;
+  max-width: 15rem;
+  width: auto;
   margin: 0.25rem 0;
+}
+
+.btn-group {
+  margin: 1.5rem auto;
 }
 
 // site header
@@ -69,13 +74,22 @@
 }
 
 // blog sidebar
-.position-sticky {
-  top: 2rem;
-}
-
 section[aria-label=Sidebar] {
+  .position-sticky {
+    top: 1rem;
+  }
+
   h4 {
     margin-top: 0.5rem;
+  }
+
+  .avatar {
+    max-height: 7.5rem;
+    max-width: 7.5rem;
+  }
+
+  .btn-group-vertical {
+    margin: 0.5rem;
   }
 }
 
@@ -92,6 +106,7 @@ article {
     height: 5rem;
     width: 5rem;
   }
+
   .flex-row {
     div:first-child {
       min-width: 7.5rem;

@@ -96,7 +96,7 @@ const handleNewCommentSubmit = (event) => {
     const payload = {
         author: {
             image: "https://i.pravatar.cc/350?u=2054e2c9",
-            name: "Berilac Gardner",
+            name: "Amaranth Burrowes",
         },
         comment: {
             message,
