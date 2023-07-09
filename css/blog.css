@@ -20,21 +20,25 @@
   margin: 1.5rem auto;
 }
 
-.blog-header {
+.btn {
+  text-transform: capitalize !important;
+}
+
+header {
   border-bottom-color: #e5e5e5 !important;
 }
-.blog-header .logo {
+header .logo {
   max-height: 2.75rem;
   width: auto;
 }
-.blog-header #headerLogoRight {
+header #headerLogoRight {
   transform: scaleX(-1);
 }
-.blog-header .blog-title {
+header .site-title {
   font-family: "Pacifico", "Times New Roman", serif;
   font-size: 3rem;
 }
-.blog-header .blog-title:hover {
+header .site-title:hover {
   text-decoration: none;
   font-size: 2rem;
 }
