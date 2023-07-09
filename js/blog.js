@@ -63,5 +63,5 @@ const handleNewCommentSubmit = (event) => {
 }
 
 
-const BlogpostCommentsForm = document.getElementById("BlogpostCommentForm");
+const BlogpostCommentsForm = document.getElementById("ArticleCommentForm");
 if (BlogpostCommentsForm) BlogpostCommentsForm.addEventListener("submit", handleNewCommentSubmit);
