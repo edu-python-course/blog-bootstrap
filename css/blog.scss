@@ -92,6 +92,12 @@ article {
     height: 5rem;
     width: 5rem;
   }
+  .flex-row {
+    div:first-child {
+      min-width: 7.5rem;
+      max-width: 10rem;
+    }
+  }
 }
 
 #ArticleCommentForm {
@@ -167,6 +173,7 @@ article {
 // site footer
 footer {
   margin-top: 1.5rem;
+  padding: 2rem;
 
   .social {
     font-size: 2.75rem;
