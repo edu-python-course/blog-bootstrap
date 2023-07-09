@@ -81,6 +81,18 @@ article {
   }
 }
 
+// comments
+#ArticleCommentsContainer {
+  .avatar {
+    height: 5rem;
+    width: 5rem;
+  }
+}
+
+#ArticleCommentForm {
+  margin-top: 2.5rem;
+}
+
 // auth forms
 .form-auth {
   height: 100%;

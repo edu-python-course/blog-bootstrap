@@ -1,44 +1,88 @@
-// blogpost comment creation
+// article comment creation
 
-const createBlogpostComment = ({author, message, created_at}) => {
-    const comment = document.createElement("div");
-    comment.classList.add("blogpost-comment", "col-12", "d-flex");
 
-    const author_avatar = document.createElement("img");
-    author_avatar.src = author.img;
-    author_avatar.classList.add("avatar", "rounded-circle", "p-2");
-    comment.appendChild(author_avatar);
+/**
+ * Create author block for new comment
+ *
+ * @param name author's name
+ * @param image author's avatar link
+ * @returns {HTMLDivElement}
+ */
+const createCommentAuthorBlock = ({name, image}) => {
+    const container = document.createElement("div")
+    container.classList.add("text-center", "me-3")
 
-    const comment_body = document.createElement("div");
-    comment.appendChild(comment_body);
+    const authorImage = document.createElement("img")
+    authorImage.classList.add("avatar", "rounded-circle", "p-2")
+    authorImage.src = image
+    container.appendChild(authorImage)
 
-    const comment_author = document.createElement("strong");
-    comment_author.classList.add("h4", "mb-2");
-    comment_author.innerText = author.name;
-    comment_body.appendChild(comment_author);
+    const authorName = document.createElement("div")
+    authorName.classList.add("fw-bolder", "fst-italic")
+    authorName.innerText = name
+    container.appendChild(authorName)
 
-    const comment_message = document.createElement("div");
-    comment_message.innerText = message;
-    comment_body.appendChild(comment_message);
-
-    const comment_created = document.createElement("small");
-    const icon = document.createElement("i");
-    comment_created.classList.add("text-muted");
-    comment_created.innerText = created_at;
-    icon.classList.add("bi", "bi-calendar");
-    comment_created.insertBefore(icon, comment_created.firstChild);
-    comment_body.appendChild(comment_created);
-
-    return comment;
+    return container
 }
 
 
-const addBlogpostComment = comment => {
-    const container = document.getElementById("BlogpostCommentsContainer");
-    if (container) container.insertBefore(comment, container.firstChild);
+/**
+ * Create message block for new comment
+ *
+ * @param created message creation date
+ * @param message message text
+ * @returns {HTMLDivElement}
+ */
+const createCommentMessageBlock = ({created, message}) => {
+    const container = document.createElement("div")
+    container.classList.add("text-start")
+
+    const messageCreated = document.createElement("small")
+    messageCreated.classList.add("fw-light")
+    messageCreated.innerText = created
+    container.appendChild(messageCreated)
+
+    const messageText = document.createElement("p")
+    messageText.innerText = message
+    container.appendChild(messageText)
+
+    return container
 }
 
 
+/**
+ * Create article comment
+ *
+ * @param author comment's author information
+ * @param comment comment date (creation date and message text)
+ * @returns {HTMLDivElement}
+ */
+const createArticleComment = ({author, comment}) => {
+    const container = document.createElement("div")
+    container.classList.add("d-flex", "flex-row")
+    container.appendChild(createCommentAuthorBlock(author))
+    container.appendChild(createCommentMessageBlock(comment))
+
+    return container
+}
+
+
+/**
+ * Add article comment to page
+ *
+ * @param comment comment data to append
+ */
+const addArticleComment = comment => {
+    const container = document.getElementById("ArticleCommentsContainer");
+    if (container) container.appendChild(comment);
+}
+
+
+/**
+ * Handle comment form submit event
+ *
+ * @param event
+ */
 const handleNewCommentSubmit = (event) => {
     event.preventDefault();
     event.stopPropagation();
@@ -51,17 +95,19 @@ const handleNewCommentSubmit = (event) => {
     // TODO: get payload from backend
     const payload = {
         author: {
-            img: "https://i.pravatar.cc/350?u=da594f2b",
-            name: "Bosco Longhole",
+            image: "https://i.pravatar.cc/350?u=2054e2c9",
+            name: "Berilac Gardner",
         },
-        message,
-        created_at: "Feb 2, 2023",
+        comment: {
+            message,
+            created: "Feb 2, 2023",
+        }
     }
 
-    const comment = createBlogpostComment(payload);
-    addBlogpostComment(comment);
+    const comment = createArticleComment(payload);
+    addArticleComment(comment);
 }
 
 
-const BlogpostCommentsForm = document.getElementById("ArticleCommentForm");
-if (BlogpostCommentsForm) BlogpostCommentsForm.addEventListener("submit", handleNewCommentSubmit);
+const CommentForm = document.getElementById("ArticleCommentForm");
+if (CommentForm) CommentForm.addEventListener("submit", handleNewCommentSubmit);
