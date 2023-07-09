@@ -109,7 +109,6 @@ const handleNewCommentSubmit = (event) => {
 }
 
 
+// set event listeners
 const commentForm = document.getElementById("ArticleCommentForm")
-if (commentForm) {
-    commentForm.addEventListener("submit", handleNewCommentSubmit)
-}
+if (commentForm) commentForm.addEventListener("submit", handleNewCommentSubmit)
