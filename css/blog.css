@@ -34,6 +34,10 @@
   font-size: 2rem;
 }
 
+.pagination {
+  margin: 1.5rem auto;
+}
+
 .nav-scroller {
   position: relative;
   z-index: 2;
@@ -123,7 +127,10 @@ article h1, article h2, article h3 {
   margin-right: 0.5rem;
 }
 
-.social {
+footer {
+  margin-top: 1.5rem;
+}
+footer .social {
   font-size: 2.75rem;
   color: var(--bs-body-color);
   margin: 0 1rem;

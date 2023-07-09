@@ -73,8 +73,8 @@ const createArticleComment = ({author, comment}) => {
  * @param comment comment data to append
  */
 const addArticleComment = comment => {
-    const container = document.getElementById("ArticleCommentsContainer");
-    if (container) container.appendChild(comment);
+    const container = document.getElementById("ArticleCommentsContainer")
+    if (container) container.appendChild(comment)
 }
 
 
@@ -87,7 +87,7 @@ const handleNewCommentSubmit = (event) => {
     event.preventDefault();
     event.stopPropagation();
 
-    const message = event.target.querySelector("textarea").value.trim();
+    const message = event.target.querySelector("textarea").value.trim()
     event.target.reset();
 
     if (!message) return;
@@ -104,10 +104,12 @@ const handleNewCommentSubmit = (event) => {
         }
     }
 
-    const comment = createArticleComment(payload);
+    const comment = createArticleComment(payload)
     addArticleComment(comment);
 }
 
 
-const CommentForm = document.getElementById("ArticleCommentForm");
-if (CommentForm) CommentForm.addEventListener("submit", handleNewCommentSubmit);
+const commentForm = document.getElementById("ArticleCommentForm")
+if (commentForm) {
+    commentForm.addEventListener("submit", handleNewCommentSubmit)
+}
