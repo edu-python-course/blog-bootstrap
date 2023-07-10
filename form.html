@@ -6,7 +6,7 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="Python training course - Django blog project">
-  <title>About | Django Blog</title>
+  <title>Articles | Django Blog</title>
   <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/blog/">
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
   <link rel="icon" type="image/png" href="img/favicon.png">
@@ -25,7 +25,7 @@
       <div class="col-2 col-md-3 col-lg-4">
         <img src="img/logo.svg" alt="Site logo" class="logo" id="headerLogoLeft">
       </div>
-      <div class="col">
+      <div class="col text-capitalize">
         <a href="index.html" class="site-title text-dark">Django Blog</a>
       </div>
       <div class="col-2 col-sm-2 col-md-3 col-lg-4">
@@ -51,74 +51,32 @@
 <main class="container">
   <div class="row">
     <section class="col-md-9" role="main">
-      <div class="row row-cols-1 px-2">
-        <div class="col">
-          <h1 class="h1 text-center">About Our Website</h1>
-          <p class="text-body">
-            Welcome to our website! We are a passionate team of web developers, data scientists, and cybersecurity
-            experts dedicated to creating exceptional digital experiences. Our goal is to provide you with valuable
-            insights, secure web solutions, and a seamless user experience.
-          </p>
+      <div class="h4 fst-italic">Article Form</div>
+      <form id="articleForm" class="has-validation">
+        <div>
+          <label for="title" class="form-label">Title</label>
+          <input type="text" name="title" id="title" class="form-control">
         </div>
-      </div>
-      <div class="row row-cols-sm-1 row-cols-md-2 px-2">
-        <div class="col">
-          <h2>Who We Are:</h2>
-          <p class="text-body">
-            We are a dynamic team of professionals with expertise in web development, data science, and cybersecurity.
-            Our diverse backgrounds and skill sets enable us to tackle complex challenges and deliver innovative
-            solutions tailored to your specific needs. We are committed to staying up-to-date with the latest industry
-            trends and technologies to ensure that we provide you with cutting-edge solutions.
-          </p>
-          <h2>Our Commitment:</h2>
-          <p class="text-body">
-            We are committed to providing you with exceptional service and solutions that exceed your expectations. We
-            believe in building long-term partnerships with our clients, collaborating closely to understand your unique
-            requirements and deliver customized solutions that address your specific challenges.
-          </p>
-          <p class="text-body">
-            Our team is dedicated to delivering projects on time and within budget, without compromising on quality. We
-            strive for excellence in every aspect of our work, ensuring that our web solutions are visually appealing,
-            user-friendly, and aligned with your business objectives.
-          </p>
+        <div>
+          <label for="category" class="form-label">Category</label>
+          <select name="category" id="category" class="form-select" data-live-search="true" multiple>
+            <option value="1">Technology Trends</option>
+            <option value="2">Web Development</option>
+            <option value="3">Data Science</option>
+            <option value="4">Cybersecurity</option>
+            <option value="5">Mobile App Development</option>
+            <option value="6">Cloud Computing</option>
+            <option value="7">UX/UI Design</option>
+            <option value="8">DevOps</option>
+            <option value="9">Agile Methodology</option>
+            <option value="10">Internet of Things (IoT)</option>
+          </select>
         </div>
-        <div class="col">
-          <h2>What We Do:</h2>
-          <p class="text-body">
-            At our core, we specialize in web development, creating dynamic and user-friendly websites that captivate
-            audiences and drive results. Whether you need a simple informative website or a complex web application, we
-            have the skills and expertise to bring your vision to life. Our focus is on delivering websites that not
-            only look visually stunning but also provide a seamless and intuitive user experience.
-          </p>
-          <p class="text-body">
-            In addition to web development, we are passionate about data science. We leverage advanced analytics
-            techniques to extract insights from data, empowering you to make informed decisions and unlock the hidden
-            potential in your data. From predictive analytics to personalized recommendations, we help you harness the
-            power of data to drive growth and optimize your business strategies.
-          </p>
-          <p class="text-body">
-            As cybersecurity is a top priority in today's digital landscape, we also prioritize the security of our web
-            solutions. We implement robust security measures to protect your data and ensure the integrity of your web
-            applications. From secure authentication to encrypted communication, we employ industry best practices to
-            safeguard your information and provide a secure browsing experience.
-          </p>
+        <div>
+          <label for="content" class="form-label">Content</label>
+          <textarea name="content" id="content" class="form-control"></textarea>
         </div>
-      </div>
-      <div class="row row-cols-1 px-2">
-        <div class="col">
-          <h2>Get in Touch:</h2>
-          <p class="text-body">
-            We would love to hear from you and discuss how we can help you achieve your web development, data science,
-            or cybersecurity goals. Feel free to reach out to us through the contact information provided on our
-            website. Our friendly team is here to answer your questions and guide you through the process of creating an
-            exceptional web presence.
-          </p>
-          <p>
-            Thank you for visiting our website. We look forward to partnering with you and helping you
-            succeed in the digital world.
-          </p>
-        </div>
-      </div>
+      </form>
     </section>
     <section class="col-md-3" aria-label="Sidebar">
       <div class="position-sticky">
@@ -132,7 +90,8 @@
               <a href="./profile.html" class="h5 fst-italic">Amaranth Burrowes</a>
             </div>
             <div class="col btn-group-vertical" role="group">
-              <a href="form.html" class="btn btn-outline-dark">create article</a>
+              <a href="./index.html" class="btn btn-secondary" role="button">cancel</a>
+              <button class="btn btn-outline-dark" id="publishSubmit">submit</button>
             </div>
           </div>
         </div>
@@ -187,5 +146,6 @@
 <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
         integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
         crossorigin="anonymous" async></script>
+<script src="js/articles.min.js"></script>
 </body>
 </html>

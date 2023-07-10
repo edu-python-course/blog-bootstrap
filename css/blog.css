@@ -105,7 +105,7 @@ article h1, article h2, article h3 {
 .form-auth input {
   border-radius: 0;
 }
-.form-auth input#username {
+.form-auth input#title {
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
 }
@@ -121,6 +121,10 @@ article h1, article h2, article h3 {
 .form-auth.form-signup #confirmPassword {
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
+}
+
+#articleForm #content {
+  min-height: 20rem;
 }
 
 footer {
