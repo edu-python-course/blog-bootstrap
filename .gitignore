@@ -5,6 +5,12 @@
 # node modules
 /node_modules/
 
+# bootstrap source may be required for autocomplite,
+# but they aren't part of current repository content
+/css/bootstrap-*.*
+/css/bootstrap.*
+/js/bootstrap.*
+
 # emacs caches and backup files
 \#*\#
 *~
