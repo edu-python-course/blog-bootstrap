@@ -18,6 +18,38 @@
 </head>
 <body>
 
+<div class="modal fade" id="modalFormAccountSetPassword" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="h2 text-danger-emphasis">Update User Password</div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="" id="accountSetPassword">
+          <div class="form-floating my-1">
+            <input type="password" class="form-control" id="currentPassword" placeholder="Current Password"
+                   name="current_password">
+            <label for="currentPassword">Current Password</label>
+          </div>
+          <div class="form-floating my-1">
+            <input type="password" class="form-control" id="newPassword" placeholder="New Password"
+                   name="new_password">
+            <label for="newPassword">New Password</label>
+          </div>
+          <div class="form-floating my-1">
+            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password"
+                   name="confirm_password">
+            <label for="confirmPassword">Confirm Password</label>
+          </div>
+          <div class="d-flex justify-content-end mt-3">
+            <input type="submit" class="btn btn-lg btn-outline-dark" value="Submit">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="modal fade" id="modalFormAccountDeactivate" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -92,7 +124,9 @@
         <div class="btn-group w-100">
           <a href="form_article.html" class="btn btn-outline-dark">create article</a>
           <button class="btn btn-outline-dark">change user data</button>
-          <button class="btn btn-outline-dark">change password</button>
+          <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modalFormAccountSetPassword">
+            change password
+          </button>
           <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalFormAccountDeactivate">
             delete account
           </button>
