@@ -15,7 +15,7 @@ Contents
 - [detail.html](./detail.html)
   This is a detailed blog post page. It contains the full blog post's
   content. Comments related to a single blog post are also present here.
-- [form.html](./form.html)
+- [form.html](./form_article.html)
   Blog post form (Creation and update).
 - [profile.html](./profile.html)
   User's personal page. This page is supposed to be public for all.
