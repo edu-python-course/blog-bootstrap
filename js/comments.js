@@ -1,5 +1,5 @@
 // article comment creation
-
+// TODO: Slit into individual packages to handle UI, API etc. GH-41
 
 /**
  * Create author block for new comment
