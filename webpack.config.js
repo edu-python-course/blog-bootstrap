@@ -14,6 +14,7 @@ const HTMLWebpackPlugin = require("html-webpack-plugin")
 const miniCssExportPlugin = require("mini-css-extract-plugin")
 
 // webpack config object
+// noinspection WebpackConfigHighlighting
 module.exports = {
     mode: "development",
     output: {
@@ -22,9 +23,9 @@ module.exports = {
         clean: true
     },
     devServer: {
-      static: path.resolve(__dirname, "dist"),
-      port: 8000,
-      hot: true
+        static: path.resolve(__dirname, "dist"),
+        port: 8000,
+        hot: true
     },
     plugins: [
         new miniCssExportPlugin({"filename": "main.min.css"}),
@@ -53,7 +54,15 @@ module.exports = {
                 generator: {
                     filename: "img/[name][ext]"
                 }
-            }
+            },
+            {
+                mimetype: "image/svg+xml",
+                scheme: "data",
+                type: "asset/resource",
+                generator: {
+                    filename: "icons/[hash].svg"
+                }
+            },
         ]
     }
 }
