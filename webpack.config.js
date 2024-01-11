@@ -12,13 +12,14 @@ const path = require("path")
 const autoprefixer = require("autoprefixer")
 const HTMLWebpackPlugin = require("html-webpack-plugin")
 const miniCssExportPlugin = require("mini-css-extract-plugin")
+const conf = require("./blog/conf")
 
 // webpack config object
 // noinspection WebpackConfigHighlighting
 module.exports = {
     mode: "development",
     output: {
-        filename: "main.bundle.js",
+        filename: "js/main.bundle.js",
         path: path.resolve(__dirname, "dist"),
         clean: true
     },
@@ -28,7 +29,15 @@ module.exports = {
         hot: true
     },
     plugins: [
-        new miniCssExportPlugin({"filename": "main.min.css"}),
+        new miniCssExportPlugin({"filename": "css/main.min.css"}),
+        new HTMLWebpackPlugin({
+            template: "./src/views/index.hbs",
+            filename: "index.html",
+            templateParameters: {
+                title: "Test Webpack",
+                ...conf.templateParameters
+            }
+        })
     ],
     module: {
         rules: [
@@ -63,6 +72,10 @@ module.exports = {
                     filename: "icons/[hash].svg"
                 }
             },
+            {
+                test: /\.hbs$/,
+                loader: "handlebars-loader"
+            }
         ]
     }
 }
