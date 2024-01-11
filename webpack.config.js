@@ -31,10 +31,10 @@ module.exports = {
     plugins: [
         new miniCssExportPlugin({"filename": "css/main.min.css"}),
         new HTMLWebpackPlugin({
-            template: "./src/views/index.hbs",
+            template: "./src/views/list_view.hbs",
             filename: "index.html",
             templateParameters: {
-                title: "Test Webpack",
+                title: "All Articles",
                 ...conf.templateParameters
             }
         })
