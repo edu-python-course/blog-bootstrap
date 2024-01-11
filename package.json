@@ -8,6 +8,11 @@
   "version": "2.0-development",
   "private": true,
   "license": "MIT",
+  "scripts": {
+    "start": "webpack serve",
+    "build": "webpack build --mode production",
+    "build:dev": "webpack build --mode development"
+  },
   "devDependencies": {
     "autoprefixer": "^10.4.16",
     "css-loader": "^6.9.0",
