@@ -2,7 +2,7 @@
 // noinspection ES6UnusedImports
 
 // Bind sources
-import "./scss/bs-styles.scss"
+import "bootstrap/scss/bootstrap.scss"
 
 import "./img/anonymous.svg"
 import "./img/favicon.png"
