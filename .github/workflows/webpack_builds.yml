@@ -32,6 +32,7 @@ jobs:
 
     steps:
       - name: build the distribution bundle
+        working-directory: ./blog-bootstrap  # Set the working directory to your project's root
         run: npm run build:dev
 
   production:
@@ -40,4 +41,5 @@ jobs:
 
     steps:
       - name: build the distribution bundle
+        working-directory: ./blog-bootstrap  # Set the working directory to your project's root
         run: npm run build
