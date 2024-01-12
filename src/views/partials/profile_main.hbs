@@ -1,0 +1,90 @@
+<main class="col col-md-9" id="articlesContainer">
+  <section class="row text-center">
+    <h1>{{user.first_name}} {{user.last_name}}</h1>
+  </section>
+  <section class="row" aria-label="Profile">
+    <div class="col col-md-12 col-lg-3 d-flex justify-content-center">
+      <img src="{{user.image}}" alt="avatar" class="avatar rounded-circle p-2">
+    </div>
+    <div class="col col-md-12 col-lg-9 col-sm-12 col-md-6 col-lg-9">
+      Hello, I'm a passionate web developer, data science enthusiast, and cybersecurity advocate.
+      With several years of experience in the field, I have dedicated my career to staying at the forefront of
+      technological advancements in web development and leveraging them to create innovative and user-centric
+      solutions.
+
+      As a web developer, I have always been fascinated by the power of technology to transform the way we
+      interact with websites and applications. My journey in web development began with a strong foundation in
+      programming languages such as HTML, CSS, and JavaScript, which laid the groundwork for my exploration of
+      more advanced frameworks and technologies.
+    </div>
+  </section>
+  {{#if can_edit}}
+    <section class="row" aria-label="AccountActions">
+      <div class="btn-group w-100">
+        <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modalSetUserData">
+          change user data
+        </button>
+        <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modalChangePassword">
+          change password
+        </button>
+        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalDeactivateAccount">
+          deactivate account
+        </button>
+      </div>
+    </section>
+  {{/if}}
+  <h4 class="fst-italic">Articles by this author [2]</h4>
+  <section class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 position-relative"
+           data-masonry='{"percentPosition": true }'>
+    <article class="col">
+      <div class="card shadow">
+        <div class="card-body">
+          <div class="text-start"><small class="fw-lighter">March 22, 2023</small></div>
+          <h2 class="card-title">
+            Exploring the Evolving Landscape of Web Development in the Age of Technology Trends
+          </h2>
+          <div class="text-end">by <a href="" class="link-body-emphasis">Amaranth Burrowes</a></div>
+          <ul class="d-flex justify-content-end list-unstyled my-1">
+            <li class="fw-light ms-3">Technology Trends</li>
+            <li class="fw-light ms-3">Web Development</li>
+          </ul>
+          <p class="card-text my-2">
+            Introduction:
+
+            In today's rapidly advancing technological landscape, web development has become an indispensable part
+            of our lives. As the world becomes increasingly interconnected, it is vital for businesses and
+            individuals alike to stay up-to-date with the latest technology trends in order to thrive in the digital
+            realm.
+          </p>
+          <a href="{{DetailView}}" class="card-link text-body fw-bold">Continue reading...</a>
+        </div>
+      </div>
+    </article>
+    <article class="col">
+      <div class="card shadow">
+        <div class="card-body">
+          <div class="text-start"><small class="fw-lighter">May 1, 2023</small></div>
+          <h2 class="card-title">
+            Driving Innovation and Efficiency: The Synergy of Agile Methodology and the Internet of Things (IoT)
+          </h2>
+          <div class="text-end">by <a href="" class="link-body-emphasis">Amaranth Burrowes</a></div>
+          <ul class="d-flex justify-content-end list-unstyled my-1">
+            <li class="fw-light ms-3">Agile Methodology</li>
+            <li class="fw-light ms-3">Internet of Things (IoT)</li>
+          </ul>
+          <p class="card-text my-2">
+            Introduction:
+
+            In an era of rapid technological advancements, organizations are seeking ways to innovate and stay ahead
+            of the curve. The combination of Agile methodology and the Internet of Things (IoT) has emerged as a
+            powerful duo, enabling businesses to drive efficiency, enhance collaboration, and deliver innovative IoT
+            solutions. In this article, we will explore the convergence of Agile and IoT, highlighting how this
+            synergy can revolutionize product development, accelerate time to market, and unlock new possibilities
+            in the connected world.
+          </p>
+          <a href="{{DetailVierw}}" class="card-link text-body fw-bold">Continue reading...</a>
+        </div>
+      </div>
+    </article>
+  </section>
+</main>
