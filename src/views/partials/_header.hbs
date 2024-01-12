@@ -5,7 +5,7 @@
         <img src="{{logo}}" alt="Site logo" class="logo" id="headerLogoLeft">
       </div>
       <div class="col text-capitalize">
-        <a href="{{ListView}}" class="site-title text-dark">Django Blog</a>
+        <a href="{{ListView}}" class="site-title text-dark">{{BlogSiteTitle}}</a>
       </div>
       <div class="col-2 col-sm-2 col-md-3 col-lg-4">
         <img src="{{logo}}" alt="Site logo" class="logo" id="headerLogoRight">
@@ -14,16 +14,9 @@
   </header>
   <div class="nav-scroller py-1" role="list">
     <nav class="nav d-flex justify-content-between">
-      <a href="" class="nav-item nav-link link-body-emphasis">Technology Trends</a>
-      <a href="" class="nav-item nav-link link-body-emphasis">Web Development</a>
-      <a href="" class="nav-item nav-link link-body-emphasis">Data Science</a>
-      <a href="" class="nav-item nav-link link-body-emphasis">Cybersecurity</a>
-      <a href="" class="nav-item nav-link link-body-emphasis">Mobile App Development</a>
-      <a href="" class="nav-item nav-link link-body-emphasis">Cloud Computing</a>
-      <a href="" class="nav-item nav-link link-body-emphasis">UX/UI Design</a>
-      <a href="" class="nav-item nav-link link-body-emphasis">DevOps</a>
-      <a href="" class="nav-item nav-link link-body-emphasis">Agile Methodology</a>
-      <a href="" class="nav-item nav-link link-body-emphasis">Internet of Things (IoT)</a>
+      {{#each navs}}
+        <a href="{{this.link}}" class="nav-item nav-link link-body-emphasis">{{this.title}}</a>
+      {{/each}}
     </nav>
   </div>
 </div>
