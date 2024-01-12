@@ -1,7 +1,20 @@
 <aside class="col-md-3" aria-label="Sidebar">
   <div class="sticky-top">
     <div class="ps-4">
-      <h4 class="fst-italic">Account</h4>
+      <div class="h4 fst-italic" role="heading">Account</div>
+      <section class="row row-cols-1 justify-content-center"
+               aria-description="Authenticated user information" aria-label="Authenticated">
+        {{#if authenticated }}
+          <img src="{{user.image}}" alt="avatar"
+               class="col rounded-circle p-2 avatar">
+          <div class="col text-center">
+            <a href="{{ProfileView}}" class="h5 fst-italic">{{user.first_name}} {{user.last_name}}</a>
+          </div>
+        {{else}}
+          <img src="{{anonymous_img}}" alt="avatar"
+               class="col rounded-circle p-2 avatar">
+        {{/if}}
+      </section>
     </div>
   </div>
 </aside>

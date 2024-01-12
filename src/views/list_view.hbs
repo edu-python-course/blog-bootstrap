@@ -15,7 +15,7 @@
 <div class="container">
   <div class="row">
     {{>partials/list_articles.hbs}}
-    {{>partials/_sidebar.hbs}}
+    {{>partials/_sidebar.hbs authenticated=user}}
   </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
