@@ -1,0 +1,46 @@
+<aside class="col-md-3" aria-label="Sidebar">
+  <div class="sticky-top">
+    <div class="ps-4">
+      <div class="h4 fst-italic" role="heading">Account</div>
+      <section class="row row-cols-1 justify-content-center" aria-label="Authenticated User"
+               aria-description="Authenticated user information">
+        {{#if authenticated }}
+          <img src="{{user.image}}" alt="avatar"
+               class="col rounded-circle p-2 avatar">
+          <div class="col text-center">
+            <a href="{{ProfileView}}" class="h5 fst-italic">{{user.first_name}} {{user.last_name}}</a>
+          </div>
+        {{else}}
+          <img src="{{anonymous_img}}" alt="avatar"
+               class="col rounded-circle p-2 avatar">
+        {{/if}}
+      </section>
+      <section class="row row-cols-1 justify-content-center" aria-label="User Actions">
+        {{#if authenticated }}
+          <div class="col btn-group-vertical" role="group">
+            <a href="{{FormView}}" class="btn btn-outline-dark" role="button">create article</a>
+            {{#if is_editable}}
+              <a href="{{FormView}}" class="btn btn-outline-dark" role="button">update article</a>
+              <button class="btn btn-danger"
+                      data-bs-toggle="modal" data-bs-target="#modalArticleDelete">delete article
+              </button>
+            {{/if}}
+          </div>
+        {{else}}
+          <div class="col btn-group-vertical" role="group">
+            <a href="{{SignUpView}}" class="btn btn-outline-dark">register</a>
+            <a href="{{SignInView}}" class="btn btn-outline-dark">login</a>
+          </div>
+        {{/if}}
+      </section>
+      <section class="row row-cols-1 justify-content-center" aria-label="About"
+               aria-description="A reference to static the static content page">
+        <h4 class="fst-italic">About</h4>
+        <p class="text-body">
+          Our goal is to provide you with valuable insights, secure web solutions, and a seamless
+          user experience. <a href="{{AboutView}}" class="link-body-emphasis">See more...</a>
+        </p>
+      </section>
+    </div>
+  </div>
+</aside>

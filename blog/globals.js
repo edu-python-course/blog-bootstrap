@@ -9,8 +9,15 @@ const globalTemplateParameters = {
     logo: "./img/logo.svg",
 
     BlogSiteTitle: "Blog Templates",
-}
 
+    user: {
+        username: "wheed1997",
+        email: "PippinSackville-Baggins@jourrapide.com",
+        image: "https://i.pravatar.cc/?u=PippinSackville-Baggins@jourrapide.com",
+        first_name: "Pippin",
+        last_name: "Sackville-Baggins",
+    },
+}
 
 const refs = {
     AboutView: "./about.html",

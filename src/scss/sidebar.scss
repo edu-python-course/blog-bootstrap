@@ -1,0 +1,8 @@
+$avatar-size: 10rem;
+
+aside[aria-label=Sidebar] {
+  .avatar {
+    max-height: $avatar-size;
+    max-width: $avatar-size;
+  }
+}
