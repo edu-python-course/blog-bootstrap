@@ -1,0 +1,38 @@
+header {
+  border-bottom-color: #e5e5e5 !important;
+
+  .logo {
+    max-height: 2.75rem;
+    width: auto;
+  }
+
+  #headerLogoRight {
+    transform: scaleX(-1); // flip the right one logo horizontally
+  }
+
+  .site-title {
+    font-size: 3rem;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+
+  .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+}
