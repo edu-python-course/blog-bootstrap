@@ -2,7 +2,7 @@
   <div class="sticky-top">
     <div class="ps-4">
       <div class="h4 fst-italic" role="heading">Account</div>
-      <section class="row row-cols-1 justify-content-center" aria-label="Authenticated User"
+      <section class="row row-cols-1 justify-content-center" aria-label="AuthenticatedUser"
                aria-description="Authenticated user information">
         {{#if authenticated }}
           <img src="{{user.image}}" alt="avatar"
@@ -15,7 +15,7 @@
                class="col rounded-circle p-2 avatar">
         {{/if}}
       </section>
-      <section class="row row-cols-1 justify-content-center" aria-label="User Actions">
+      <section class="row row-cols-1 justify-content-center" aria-label="UserActions">
         {{#if authenticated }}
           <div class="col btn-group-vertical" role="group">
             <a href="{{FormView}}" class="btn btn-outline-dark" role="button">create article</a>
