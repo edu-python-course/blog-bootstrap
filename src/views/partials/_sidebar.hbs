@@ -2,8 +2,8 @@
   <div class="sticky-top">
     <div class="ps-4">
       <div class="h4 fst-italic" role="heading">Account</div>
-      <section class="row row-cols-1 justify-content-center"
-               aria-description="Authenticated user information" aria-label="Authenticated">
+      <section class="row row-cols-1 justify-content-center" aria-label="Authenticated User"
+               aria-description="Authenticated user information">
         {{#if authenticated }}
           <img src="{{user.image}}" alt="avatar"
                class="col rounded-circle p-2 avatar">
@@ -15,6 +15,9 @@
                class="col rounded-circle p-2 avatar">
         {{/if}}
       </section>
+      <section class="row row-cols-1 justify-content-center" aria-label="User Actions"></section>
+      <section class="row row-cols-1 justify-content-center" aria-label="About"
+               aria-description="A reference to static the static content page"></section>
     </div>
   </div>
 </aside>
