@@ -2,11 +2,11 @@
   <section class="row text-center">
     <h1>{{user.first_name}} {{user.last_name}}</h1>
   </section>
-  <section class="row" aria-label="Profile">
-    <div class="col col-md-12 col-lg-3 d-flex justify-content-center">
+  <section class="row row-cols-1 row-cols-lg-2" aria-label="AccountData">
+    <div class="col justify-content-center">
       <img src="{{user.image}}" alt="avatar" class="avatar rounded-circle p-2">
     </div>
-    <div class="col col-md-12 col-lg-9 col-sm-12 col-md-6 col-lg-9">
+    <div class="col">
       Hello, I'm a passionate web developer, data science enthusiast, and cybersecurity advocate.
       With several years of experience in the field, I have dedicated my career to staying at the forefront of
       technological advancements in web development and leveraging them to create innovative and user-centric
@@ -33,7 +33,7 @@
       </div>
     </section>
   {{/if}}
-  <h4 class="fst-italic">Articles by this author [2]</h4>
+  <div class="h4 fst-italic" role="heading">Articles by this author [2]</div>
   <section class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 position-relative"
            data-masonry='{"percentPosition": true }'>
     {{>list_article.hbs
