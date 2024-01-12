@@ -1,17 +1,12 @@
-name: Build project bundle with Webpack
+name: Check project bundle builds
 
 on:
-  push:
-    branches:
-      - master
-
   pull_request:
     branches:
       - master
       - devel
 
 jobs:
-
   development:
     runs-on: ubuntu-latest
 
@@ -27,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: build the distribution bundle
+      - name: Build the distribution bundle
         run: npm run build:dev
 
   production:
@@ -45,5 +40,5 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: build the distribution bundle
+      - name: Build the distribution bundle
         run: npm run build
