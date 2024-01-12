@@ -38,7 +38,16 @@ module.exports = {
                 ...blog.globalTemplateParameters,
                 ...blog.refs
             }
-        })
+        }),
+        new HTMLWebpackPlugin({
+            template: "./src/views/profile_view.hbs",
+            filename: "profile.html",
+            templateParameters: {
+                title: "User Profile",
+                ...blog.globalTemplateParameters,
+                ...blog.refs
+            }
+        }),
     ],
     module: {
         rules: [
