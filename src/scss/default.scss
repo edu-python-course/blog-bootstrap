@@ -1,7 +1,10 @@
-$avatar-size-default: 24rem;
+$avatar-min-size-default: 12rem;
+$avatar-max-size-default: 16rem;
 
 .avatar {
-  max-height: $avatar-size-default;
-  max-width: $avatar-size-default;
+  min-height: $avatar-min-size-default;
+  min-width: $avatar-min-size-default;
+  max-height: $avatar-max-size-default;
+  max-width: $avatar-max-size-default;
   margin: 0.25rem 0;
 }
