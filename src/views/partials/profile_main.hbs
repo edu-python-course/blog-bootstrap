@@ -1,0 +1,58 @@
+<main class="col col-md-9" id="articlesContainer">
+  <section class="row text-center">
+    <h1>{{user.first_name}} {{user.last_name}}</h1>
+  </section>
+  <section class="row row-cols-1 row-cols-lg-2" aria-label="AccountData">
+    <div class="col d-flex justify-content-center">
+      <img src="{{user.image}}" alt="avatar" class="avatar rounded-circle p-2">
+    </div>
+    <div class="col">
+      Hello, I'm a passionate web developer, data science enthusiast, and cybersecurity advocate.
+      With several years of experience in the field, I have dedicated my career to staying at the forefront of
+      technological advancements in web development and leveraging them to create innovative and user-centric
+      solutions.
+
+      As a web developer, I have always been fascinated by the power of technology to transform the way we
+      interact with websites and applications. My journey in web development began with a strong foundation in
+      programming languages such as HTML, CSS, and JavaScript, which laid the groundwork for my exploration of
+      more advanced frameworks and technologies.
+    </div>
+  </section>
+  {{#if can_edit}}
+    <section class="row" aria-label="AccountActions">
+      <div class="btn-group w-100">
+        <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modalSetUserData">
+          change user data
+        </button>
+        <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modalChangePassword">
+          change password
+        </button>
+        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalDeactivateAccount">
+          deactivate account
+        </button>
+      </div>
+    </section>
+  {{/if}}
+  <div class="h4 fst-italic" role="heading">Articles by this author [2]</div>
+  <section class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 position-relative"
+           data-masonry='{"percentPosition": true }'>
+    {{>list_article.hbs
+        ArticleTitle="Ship-wide, carnivorous crews impressively deserve an extraterrestrial, devastated ferengi"
+        ArticleAuthor="Pippin Sackville-Baggins"
+        ArticleContent="Shield at the colony was the turbulence of friendship, attacked to a lunar tribble.
+        Where is the strange nanomachine? The machine is more ferengi now than processor. united and wildly delighted.
+        Honor, disconnection, and mind. Mystery at the holodeck was the plasma of paralysis, raised to an intelligent
+        collective. Tribble of a post-apocalyptic tragedy, handle the alarm! Bare, brave queens cunningly question
+        a strange, post-apocalyptic crew. kahlesses die with core?"
+        ArticleTopics=(topics "Fake latin;Science Fiction;Culinary Inspirations")
+        ArticleDate="July 7, 2024"
+    }}
+    {{>list_article.hbs
+        ArticleTitle="Black, wet seashells calmly pull a gutless, misty whale"
+        ArticleAuthor="Pippin Sackville-Baggins"
+        ArticleContent="The lad commands with life, scrape the galley until it falls!"
+        ArticleTopics=(topics "Pirate Lingo;Esoteric Wisdom;Fake Latin")
+        ArticleDate="December 9, 2023"
+    }}
+  </section>
+</main>
