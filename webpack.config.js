@@ -50,7 +50,7 @@ module.exports = {
         }),
         new HTMLWebpackPlugin({
             template: "./src/views/signin_view.hbs",
-            filename: "signin.html",
+            filename: "sign-in.html",
             templateParameters: {
                 title: "Sign In",
                 ...blog.globalTemplateParameters,
@@ -59,7 +59,7 @@ module.exports = {
         }),
         new HTMLWebpackPlugin({
             template: "./src/views/signup_view.hbs",
-            filename: "signup.html",
+            filename: "sign-up.html",
             templateParameters: {
                 title: "Sign Up",
                 ...blog.globalTemplateParameters,
