@@ -7,8 +7,9 @@
       </h2>
       <div class="text-end">by <a href="{{ProfileView}}" class="link-body-emphasis">{{ArticleAuthor}}</a></div>
       <ul class="d-flex justify-content-end list-unstyled my-1">
-        <li class="fw-light ms-3">Category 1</li>
-        <li class="fw-light ms-3">Category 2</li>
+        {{#each ArticleTopics }}
+          <li class="fw-light ms-3">{{this}}</li>
+        {{/each}}
       </ul>
       <p class="card-text my-2">
         {{ArticleContent}}

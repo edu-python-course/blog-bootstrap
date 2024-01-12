@@ -74,7 +74,13 @@ module.exports = {
             },
             {
                 test: /\.hbs$/,
-                loader: "handlebars-loader"
+                loader: "handlebars-loader",
+                options: {
+                    helperDirs: path.join(__dirname, "blog/helpers"),
+                    precompileOptions: {
+                        knownHelpersOnly: false,
+                    }
+                }
             }
         ]
     }
