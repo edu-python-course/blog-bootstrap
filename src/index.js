@@ -7,6 +7,7 @@ import * as bootstrap from "bootstrap"
 
 // Bind sources
 import "./scss/header.scss"
+import "./scss/sidebar.scss"
 
 import "./img/anonymous.svg"
 import "./img/favicon.png"
