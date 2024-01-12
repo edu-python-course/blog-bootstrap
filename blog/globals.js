@@ -2,11 +2,24 @@
  * Global source configurations
  */
 
-const templateParameters = {
+const globalTemplateParameters = {
     favicon_svg: "./img/favicon.svg",
     favicon_png: "./img/favicon.png",
     anonymous_img: "./img/anonymous.svg",
     logo: "./img/logo.svg",
+
+    BlogSiteTitle: "Blog Templates",
+}
+
+
+const refs = {
+    AboutView: "./about.html",
+    ListView: "./index.html",
+    DetailView: "./detail.html",
+    FormView: "./form.html",
+    SignInView: "./sign-in.html",
+    SignUpView: "./sign-up.html",
+    ProfileView: "./profile.html",
 
     navs: [
         {link: "?query=fake-latin", title: "Fake Latin"},
@@ -15,10 +28,9 @@ const templateParameters = {
         {link: "?query=pirate-lingo", title: "Pirate Lingo"},
         {link: "?query=science-fiction", title: "Science Fiction"},
     ],
-
-    BlogSiteTitle: "Blog Templates",
 }
 
 module.exports = {
-    templateParameters
+    globalTemplateParameters,
+    refs,
 }

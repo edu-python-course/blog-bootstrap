@@ -12,7 +12,7 @@ const path = require("path")
 const autoprefixer = require("autoprefixer")
 const HTMLWebpackPlugin = require("html-webpack-plugin")
 const miniCssExportPlugin = require("mini-css-extract-plugin")
-const conf = require("./blog/conf")
+const blog = require("./blog/globals")
 
 // webpack config object
 // noinspection WebpackConfigHighlighting
@@ -35,7 +35,8 @@ module.exports = {
             filename: "index.html",
             templateParameters: {
                 title: "All Articles",
-                ...conf.templateParameters
+                ...blog.globalTemplateParameters,
+                ...blog.refs
             }
         })
     ],
