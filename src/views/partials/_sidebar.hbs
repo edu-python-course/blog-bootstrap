@@ -18,12 +18,15 @@
       <section class="row row-cols-1 justify-content-center" aria-label="UserActions">
         {{#if authenticated }}
           <div class="col btn-group-vertical" role="group">
+            {{#if can_comment}}
+              <button class="btn btn-outline-dark"
+                      data-bs-toggle="modal" data-bs-target="#modalArticleComment">comment</button>
+            {{/if}}
             <a href="{{FormView}}" class="btn btn-outline-dark" role="button">create article</a>
             {{#if can_edit}}
               <a href="{{FormView}}" class="btn btn-outline-dark" role="button">update article</a>
               <button class="btn btn-danger"
-                      data-bs-toggle="modal" data-bs-target="#modalArticleDelete">delete article
-              </button>
+                      data-bs-toggle="modal" data-bs-target="#modalArticleDelete">delete article</button>
             {{/if}}
           </div>
         {{else}}
