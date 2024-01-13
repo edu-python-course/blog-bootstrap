@@ -32,7 +32,7 @@ module.exports = {
         new miniCssExportPlugin({"filename": "css/main.min.css"}),
         new HTMLWebpackPlugin({
             template: "./src/views/list_view.hbs",
-            filename: "index.html",
+            filename: blog.refs.ListView,
             templateParameters: {
                 title: "All Articles",
                 ...blog.globalTemplateParameters,
@@ -41,7 +41,7 @@ module.exports = {
         }),
         new HTMLWebpackPlugin({
             template: "./src/views/profile_view.hbs",
-            filename: "profile.html",
+            filename: blog.refs.ProfileView,
             templateParameters: {
                 title: "User Profile",
                 ...blog.globalTemplateParameters,
@@ -52,14 +52,14 @@ module.exports = {
             template: "./src/views/signin_view.hbs",
             filename: "sign-in.html",
             templateParameters: {
-                title: "Sign In",
+                title: blog.refs.SignInView,
                 ...blog.globalTemplateParameters,
                 ...blog.refs
             }
         }),
         new HTMLWebpackPlugin({
             template: "./src/views/signup_view.hbs",
-            filename: "sign-up.html",
+            filename: blog.refs.SignUpView,
             templateParameters: {
                 title: "Sign Up",
                 ...blog.globalTemplateParameters,
