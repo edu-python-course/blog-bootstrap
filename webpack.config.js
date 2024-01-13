@@ -44,6 +44,7 @@ module.exports = {
             filename: blog.refs.DetailView,
             templateParameters: {
                 title: "Article Details",
+                article: blog.article,
                 ...blog.globalTemplateParameters,
                 ...blog.refs
             }

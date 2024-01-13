@@ -19,6 +19,13 @@ const globalTemplateParameters = {
     },
 }
 
+const article = {
+    title: "Ship-wide, carnivorous crews impressively deserve an extraterrestrial, devastated ferengi",
+    topics: ["Fake latin", "Science Fiction", "Culinary Inspirations"],
+    published: "July 7, 2024",
+    author:`${globalTemplateParameters.user.first_name} ${globalTemplateParameters.user.last_name}`
+}
+
 const refs = {
     AboutView: "./about.html",
     ListView: "./index.html",
@@ -39,5 +46,6 @@ const refs = {
 
 module.exports = {
     globalTemplateParameters,
+    article,
     refs,
 }
