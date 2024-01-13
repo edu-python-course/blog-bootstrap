@@ -13,9 +13,11 @@
   "private": true,
   "license": "MIT",
   "scripts": {
+    "clean": "rm -rf dist",
     "start": "webpack serve",
     "build": "webpack build --mode production",
     "build:dev": "webpack build --mode development --config webpack.dev.config.js",
+    "build:test": "npm run build && npm run build:dev && npm run clean",
     "test": "jest"
   },
   "devDependencies": {
