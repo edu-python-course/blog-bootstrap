@@ -40,6 +40,16 @@ module.exports = {
             }
         }),
         new HTMLWebpackPlugin({
+            template: "./src/views/detail_view.hbs",
+            filename: blog.refs.DetailView,
+            templateParameters: {
+                title: "Article Details",
+                article: blog.article,
+                ...blog.globalTemplateParameters,
+                ...blog.refs
+            }
+        }),
+        new HTMLWebpackPlugin({
             template: "./src/views/profile_view.hbs",
             filename: blog.refs.ProfileView,
             templateParameters: {

@@ -19,7 +19,7 @@
         {{#if authenticated }}
           <div class="col btn-group-vertical" role="group">
             <a href="{{FormView}}" class="btn btn-outline-dark" role="button">create article</a>
-            {{#if is_editable}}
+            {{#if can_edit}}
               <a href="{{FormView}}" class="btn btn-outline-dark" role="button">update article</a>
               <button class="btn btn-danger"
                       data-bs-toggle="modal" data-bs-target="#modalArticleDelete">delete article
