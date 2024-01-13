@@ -8,3 +8,9 @@ $avatar-max-size-default: 16rem;
   max-width: $avatar-max-size-default;
   margin: 0.25rem 0;
 }
+
+.form-auth {
+  input {
+    border-radius: 0;
+  }
+}

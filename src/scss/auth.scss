@@ -1,0 +1,17 @@
+$input-border-radius: 0.75rem;
+
+.form-auth {
+  .form-first-input {
+    input {
+      border-top-left-radius: $input-border-radius;
+      border-top-right-radius: $input-border-radius;
+    }
+  }
+
+  .form-last-input {
+    input {
+      border-bottom-left-radius: $input-border-radius;
+      border-bottom-right-radius: $input-border-radius;
+    }
+  }
+}
