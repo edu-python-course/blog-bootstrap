@@ -2,7 +2,7 @@
  * Global source configurations
  */
 
-const globalTemplateParameters = {
+const templateParameters = {
     favicon_svg: "./img/favicon.svg",
     favicon_png: "./img/favicon.png",
     anonymous_img: "./img/anonymous.svg",
@@ -23,7 +23,7 @@ const article = {
     title: "Ship-wide, carnivorous crews impressively deserve an extraterrestrial, devastated ferengi",
     topics: ["Fake latin", "Science Fiction", "Culinary Inspirations"],
     published: "July 7, 2024",
-    author: `${globalTemplateParameters.user.first_name} ${globalTemplateParameters.user.last_name}`,
+    author: `${templateParameters.user.first_name} ${templateParameters.user.last_name}`,
     comments: [
         {
             author: {
@@ -88,7 +88,7 @@ const
     }
 
 module.exports = {
-    globalTemplateParameters,
+    templateParameters,
     article,
     refs,
 }

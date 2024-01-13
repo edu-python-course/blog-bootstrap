@@ -1,0 +1,78 @@
+/**
+ * Webpack configuration (development)
+ *
+ * This configuration uses the default entry point for webpack v5 at
+ * "src/index.js" (omitted inside the config object)
+ *
+ * Current configuration is created to build the templates distribution
+ * for the developers needs, rather than for demonstration.
+ *
+ */
+
+const path = require("path")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const HTMLWebpackPlugin = require("html-webpack-plugin")
+const baseConfig = require("./webpack.config")
+const globals = require("./blog/globals")
+const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
+const autoprefixer = require("autoprefixer");
+
+module.exports = {
+    ...baseConfig,
+    mode: "development",
+    output: {
+        ...baseConfig.output,
+        filename: "static/js/main.bundle.js"
+    },
+    plugins: [
+        new MiniCssExtractPlugin({
+            "filename": "static/css/main.css"
+        }),
+        new HTMLWebpackPlugin({
+            template: path.resolve(__dirname, "src/views/partials/list_main.hbs"),
+            filename: "articles/article_list.html",
+            chunks: [],
+            templateParameters: {
+                ...globals.templateParameters,
+                navs: globals.refs.navs
+            }
+        })
+    ],
+    module: {
+        rules: [
+            {
+                test: /\.scss$/,
+                use: [
+                    {loader: MiniCSSExtractPlugin.loader},
+                    {loader: "css-loader"},
+                    {
+                        loader: "postcss-loader",
+                        options: {
+                            postcssOptions: {
+                                plugins: [autoprefixer]
+                            }
+                        }
+                    },
+                    {loader: "sass-loader"}
+                ]
+            },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: "asset/resource",
+                generator: {
+                    filename: "static/img/[name][ext]"
+                }
+            },
+            {
+                test: /\.hbs$/,
+                loader: "handlebars-loader",
+                options: {
+                    helperDirs: path.join(__dirname, "blog/helpers"),
+                    precompileOptions: {
+                        knownHelpersOnly: false,
+                    }
+                }
+            }
+        ]
+    }
+}

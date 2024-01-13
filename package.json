@@ -5,13 +5,17 @@
     "name": "Serhii Horodilov",
     "email": "sgorodil@gmail.com"
   },
+  "repository": {
+    "url": "git+https://github.com/edu-python-course/blog-bootstrap",
+    "type": "git"
+  },
   "version": "2.0-development",
   "private": true,
   "license": "MIT",
   "scripts": {
     "start": "webpack serve",
     "build": "webpack build --mode production",
-    "build:dev": "webpack build --mode development",
+    "build:dev": "webpack build --mode development --config webpack.dev.config.js",
     "test": "jest"
   },
   "devDependencies": {
