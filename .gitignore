@@ -5,6 +5,12 @@
 # node modules
 /node_modules/
 
+# virtual environment
+/.venv/
+/.env/
+/venv/
+/env/
+
 # distribution bundles directories
 /dist/
 
