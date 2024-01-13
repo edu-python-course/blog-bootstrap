@@ -44,4 +44,9 @@
       always offer a moon.
     </section>
   </article>
+  <section id="commentsContainer">
+    {{#each article.comments}}
+      {{>detail_comment.hbs comment=this}}
+    {{/each}}
+  </section>
 </main>
