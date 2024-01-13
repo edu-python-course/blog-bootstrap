@@ -2,28 +2,37 @@
  * Global source configurations
  */
 
-const globalTemplateParameters = {
+const BlogSiteTitle = "Blog Templates"
+
+const templateParameters = {
     favicon_svg: "./img/favicon.svg",
     favicon_png: "./img/favicon.png",
     anonymous_img: "./img/anonymous.svg",
     logo: "./img/logo.svg",
+    BlogSiteTitle,
+}
 
-    BlogSiteTitle: "Blog Templates",
+const templateParametersDevelopment = {
+    ...templateParameters,
+    favicon_svg: "./static/img/favicon.svg",
+    favicon_png: "./static/img/favicon.png",
+    anonymous_img: "./static/img/anonymous.svg",
+    logo: "./static/img/logo.svg",
+}
 
-    user: {
-        username: "wheed1997",
-        email: "PippinSackville-Baggins@jourrapide.com",
-        image: "https://i.pravatar.cc/?u=PippinSackville-Baggins@jourrapide.com",
-        first_name: "Pippin",
-        last_name: "Sackville-Baggins",
-    },
+const user = {
+    username: "wheed1997",
+    email: "PippinSackville-Baggins@jourrapide.com",
+    image: "https://i.pravatar.cc/?u=PippinSackville-Baggins@jourrapide.com",
+    first_name: "Pippin",
+    last_name: "Sackville-Baggins",
 }
 
 const article = {
     title: "Ship-wide, carnivorous crews impressively deserve an extraterrestrial, devastated ferengi",
     topics: ["Fake latin", "Science Fiction", "Culinary Inspirations"],
     published: "July 7, 2024",
-    author: `${globalTemplateParameters.user.first_name} ${globalTemplateParameters.user.last_name}`,
+    author: `${user.first_name} ${user.last_name}`,
     comments: [
         {
             author: {
@@ -88,7 +97,9 @@ const
     }
 
 module.exports = {
-    globalTemplateParameters,
+    templateParametersDevelopment,
+    templateParameters,
     article,
+    user,
     refs,
 }
