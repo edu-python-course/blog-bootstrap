@@ -2,7 +2,7 @@
  * Webpack configuration
  *
  * This configuration uses the default entry point for webpack v5 at
- * "src/index.js" (omitted inside the config object
+ * "src/index.js" (omitted inside the config object)
  *
  */
 
@@ -11,8 +11,8 @@
 const path = require("path")
 const autoprefixer = require("autoprefixer")
 const HTMLWebpackPlugin = require("html-webpack-plugin")
-const miniCssExportPlugin = require("mini-css-extract-plugin")
-const blog = require("./blog/globals")
+const MiniCSSExtractPlugin = require("mini-css-extract-plugin")
+const globals = require("./blog/globals")
 
 // webpack config object
 // noinspection WebpackConfigHighlighting
@@ -29,51 +29,51 @@ module.exports = {
         hot: true
     },
     plugins: [
-        new miniCssExportPlugin({"filename": "css/main.min.css"}),
+        new MiniCSSExtractPlugin({"filename": "css/main.min.css"}),
         new HTMLWebpackPlugin({
-            template: "./src/views/list_view.hbs",
-            filename: blog.refs.ListView,
+            template: path.resolve(__dirname, "src/views/list_view.hbs"),
+            filename: globals.refs.ListView,
             templateParameters: {
                 title: "All Articles",
-                ...blog.globalTemplateParameters,
-                ...blog.refs
+                ...globals.templateParameters,
+                ...globals.refs
             }
         }),
         new HTMLWebpackPlugin({
-            template: "./src/views/detail_view.hbs",
-            filename: blog.refs.DetailView,
+            template: path.resolve(__dirname, "src/views/detail_view.hbs"),
+            filename: globals.refs.DetailView,
             templateParameters: {
                 title: "Article Details",
-                article: blog.article,
-                ...blog.globalTemplateParameters,
-                ...blog.refs
+                article: globals.article,
+                ...globals.templateParameters,
+                ...globals.refs
             }
         }),
         new HTMLWebpackPlugin({
-            template: "./src/views/profile_view.hbs",
-            filename: blog.refs.ProfileView,
+            template: path.resolve(__dirname, "src/views/profile_view.hbs"),
+            filename: globals.refs.ProfileView,
             templateParameters: {
                 title: "User Profile",
-                ...blog.globalTemplateParameters,
-                ...blog.refs
+                ...globals.templateParameters,
+                ...globals.refs
             }
         }),
         new HTMLWebpackPlugin({
-            template: "./src/views/signin_view.hbs",
-            filename: "sign-in.html",
+            template: path.resolve(__dirname, "src/views/signin_view.hbs"),
+            filename: globals.refs.SignInView,
             templateParameters: {
-                title: blog.refs.SignInView,
-                ...blog.globalTemplateParameters,
-                ...blog.refs
+                title: globals.refs.SignInView,
+                ...globals.templateParameters,
+                ...globals.refs
             }
         }),
         new HTMLWebpackPlugin({
-            template: "./src/views/signup_view.hbs",
-            filename: blog.refs.SignUpView,
+            template: path.resolve(__dirname, "src/views/signup_view.hbs"),
+            filename: globals.refs.SignUpView,
             templateParameters: {
                 title: "Sign Up",
-                ...blog.globalTemplateParameters,
-                ...blog.refs
+                ...globals.templateParameters,
+                ...globals.refs
             }
         }),
     ],
@@ -82,7 +82,7 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [
-                    {loader: miniCssExportPlugin.loader},
+                    {loader: MiniCSSExtractPlugin.loader},
                     {loader: "css-loader"},
                     {
                         loader: "postcss-loader",
