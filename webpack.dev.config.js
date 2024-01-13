@@ -10,12 +10,11 @@
  */
 
 const path = require("path")
-const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const MiniCSSExtractPlugin = require("mini-css-extract-plugin")
 const HTMLWebpackPlugin = require("html-webpack-plugin")
+const autoprefixer = require("autoprefixer");
 const baseConfig = require("./webpack.config")
 const globals = require("./blog/globals")
-const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
-const autoprefixer = require("autoprefixer");
 
 module.exports = {
     ...baseConfig,
@@ -25,7 +24,7 @@ module.exports = {
         filename: "static/js/main.bundle.js"
     },
     plugins: [
-        new MiniCssExtractPlugin({
+        new MiniCSSExtractPlugin({
             "filename": "static/css/main.css"
         }),
         new HTMLWebpackPlugin({
