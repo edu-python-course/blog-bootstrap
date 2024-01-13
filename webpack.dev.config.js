@@ -32,10 +32,46 @@ module.exports = {
             filename: "articles/article_list.html",
             chunks: [],
             templateParameters: {
-                ...globals.templateParameters,
-                navs: globals.refs.navs
+                ...globals.templateParametersDevelopment,
+                navs: globals.refs.navs,
             }
-        })
+        }),
+        new HTMLWebpackPlugin({
+            template: path.resolve(__dirname, "src/views/partials/detail_main.hbs"),
+            filename: "articles/article_detail.html",
+            chunks: [],
+            templateParameters: {
+                ...globals.templateParametersDevelopment,
+                navs: globals.refs.navs,
+            }
+        }),
+        new HTMLWebpackPlugin({
+            template: path.resolve(__dirname, "src/views/partials/signin_form.hbs"),
+            filename: "auth/signin_form.html",
+            chunks: [],
+            templateParameters: {
+                ...globals.templateParametersDevelopment,
+                navs: globals.refs.navs,
+            }
+        }),
+        new HTMLWebpackPlugin({
+            template: path.resolve(__dirname, "src/views/partials/signup_form.hbs"),
+            filename: "auth/signup_form.html",
+            chunks: [],
+            templateParameters: {
+                ...globals.templateParametersDevelopment,
+                navs: globals.refs.navs,
+            }
+        }),
+        new HTMLWebpackPlugin({
+            template: path.resolve(__dirname, "src/views/partials/profile.hbs"),
+            filename: "users/profile.html",
+            chunks: [],
+            templateParameters: {
+                ...globals.templateParametersDevelopment,
+                navs: globals.refs.navs,
+            }
+        }),
     ],
     module: {
         rules: [
