@@ -64,7 +64,7 @@ module.exports = {
             }
         }),
         new HTMLWebpackPlugin({
-            template: path.resolve(__dirname, "src/views/partials/profile.hbs"),
+            template: path.resolve(__dirname, "src/views/partials/profile_main.hbs"),
             filename: "users/profile.html",
             chunks: [],
             templateParameters: {
