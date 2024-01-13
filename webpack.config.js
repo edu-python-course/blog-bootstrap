@@ -36,7 +36,7 @@ module.exports = {
             templateParameters: {
                 title: "All Articles",
                 ...globals.templateParameters,
-                ...globals.refs
+                ...globals.refs,
             }
         }),
         new HTMLWebpackPlugin({
@@ -46,7 +46,8 @@ module.exports = {
                 title: "Article Details",
                 article: globals.article,
                 ...globals.templateParameters,
-                ...globals.refs
+                ...globals.refs,
+                user: globals.user,
             }
         }),
         new HTMLWebpackPlugin({
@@ -55,7 +56,8 @@ module.exports = {
             templateParameters: {
                 title: "User Profile",
                 ...globals.templateParameters,
-                ...globals.refs
+                ...globals.refs,
+                user:globals.user,
             }
         }),
         new HTMLWebpackPlugin({
@@ -64,7 +66,7 @@ module.exports = {
             templateParameters: {
                 title: globals.refs.SignInView,
                 ...globals.templateParameters,
-                ...globals.refs
+                ...globals.refs,
             }
         }),
         new HTMLWebpackPlugin({
@@ -73,7 +75,7 @@ module.exports = {
             templateParameters: {
                 title: "Sign Up",
                 ...globals.templateParameters,
-                ...globals.refs
+                ...globals.refs,
             }
         }),
     ],
