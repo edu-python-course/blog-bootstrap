@@ -5,6 +5,7 @@ import "bootstrap/scss/bootstrap.scss"
 import * as bootstrap from "bootstrap"
 
 // Bind sources
+import "./scss/auth.scss"
 import "./scss/default.scss"
 import "./scss/header.scss"
 import "./scss/sidebar.scss"

@@ -48,6 +48,24 @@ module.exports = {
                 ...blog.refs
             }
         }),
+        new HTMLWebpackPlugin({
+            template: "./src/views/signin_view.hbs",
+            filename: "sign-in.html",
+            templateParameters: {
+                title: "Sign In",
+                ...blog.globalTemplateParameters,
+                ...blog.refs
+            }
+        }),
+        new HTMLWebpackPlugin({
+            template: "./src/views/signup_view.hbs",
+            filename: "sign-up.html",
+            templateParameters: {
+                title: "Sign Up",
+                ...blog.globalTemplateParameters,
+                ...blog.refs
+            }
+        }),
     ],
     module: {
         rules: [
