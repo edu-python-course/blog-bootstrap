@@ -10,7 +10,7 @@ from selenium.webdriver.common.by import By
 from _helpers import HTTPD_PORT, TestArticlesHelper
 
 
-class TestListView(TestArticlesHelper):
+class TestDetailView(TestArticlesHelper):
 
     def setUp(self):
         self.browser.get(f"http://localhost:{HTTPD_PORT}/article_detail.html")
