@@ -1,9 +1,9 @@
 name: Build dist for release
 
 on:
-  push:
-    branches:
-      - master
+  release:
+    types:
+      - published
 
 jobs:
   deploy:
@@ -24,12 +24,15 @@ jobs:
       - name: Build the distribution
         run: npm run build:dev
 
+      - name: Create dist archive
+        run: zip -r dist.zip ./dist
+
       - name: Upload release asset
         uses: actions/upload-release-asset@v1
         with:
           upload_url: ${{ github.event.release.upload_url }}
-          asset_path: ./dist
-          asset_name: dist
+          asset_path: ./dist.zip
+          asset_name: dist.zip
           asset_content_type: application/zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
