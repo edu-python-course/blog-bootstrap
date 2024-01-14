@@ -1,3 +1,4 @@
+// webpack default entry point
 // noinspection ES6UnusedImports: do not report unused imports (IDE)
 
 import "bootstrap/scss/bootstrap.scss"
