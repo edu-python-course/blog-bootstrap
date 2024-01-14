@@ -1,4 +1,4 @@
-name: Test project code
+name: Test custom JavaScript
 
 on:
   pull_request:
