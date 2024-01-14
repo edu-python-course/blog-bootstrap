@@ -51,13 +51,23 @@ module.exports = {
             }
         }),
         new HTMLWebpackPlugin({
+            template: path.resolve(__dirname, "src/views/form_view.hbs"),
+            filename: globals.refs.FormView,
+            templateParameters: {
+                title: "Article Form",
+                ...globals.templateParameters,
+                ...globals.refs,
+                user: globals.user,
+            }
+        }),
+        new HTMLWebpackPlugin({
             template: path.resolve(__dirname, "src/views/profile_view.hbs"),
             filename: globals.refs.ProfileView,
             templateParameters: {
                 title: "User Profile",
                 ...globals.templateParameters,
                 ...globals.refs,
-                user:globals.user,
+                user: globals.user,
             }
         }),
         new HTMLWebpackPlugin({

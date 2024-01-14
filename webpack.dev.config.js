@@ -46,6 +46,15 @@ module.exports = {
             }
         }),
         new HTMLWebpackPlugin({
+            template: path.resolve(__dirname, "src/views/partials/form_main.hbs"),
+            filename: "articles/article_form.html",
+            chunks: [],
+            templateParameters: {
+                ...globals.templateParametersDevelopment,
+                navs: globals.refs.navs,
+            }
+        }),
+        new HTMLWebpackPlugin({
             template: path.resolve(__dirname, "src/views/partials/signin_form.hbs"),
             filename: "auth/signin_form.html",
             chunks: [],
