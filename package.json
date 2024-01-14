@@ -9,7 +9,7 @@
     "url": "git+https://github.com/edu-python-course/blog-bootstrap",
     "type": "git"
   },
-  "version": "2.0-development",
+  "version": "2.0-rc1",
   "private": true,
   "license": "MIT",
   "scripts": {
