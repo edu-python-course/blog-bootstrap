@@ -1,4 +1,4 @@
-name: Test project code
+name: Test JavaScript code
 
 on:
   pull_request:
@@ -22,5 +22,5 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Test code with Jest
+      - name: Run tests
         run: npm run test
