@@ -3,6 +3,8 @@
 import "bootstrap/scss/bootstrap.scss"
 import * as bootstrap from "bootstrap"
 
+import * as masonry from "masonry-layout"
+
 import "./js/sidebar"
 
 import "./scss/auth.scss"
