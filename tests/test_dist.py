@@ -33,6 +33,24 @@ class TestDistContents(unittest.TestCase):
         self.assertTrue(js_dir.joinpath("main.bundle.js").exists())
         self.assertTrue(js_dir.joinpath("main.bundle.js").is_file())
 
+    def test_base_html(self):
+        self.assertTrue(self.dist.joinpath("base.html").exists())
+        self.assertTrue(self.dist.joinpath("base.html").is_file())
+
+    def test_sidebars(self):
+        templates_dir = self.dist / "_sidebars"
+
+        self.assertTrue(templates_dir.joinpath("authenticated.html").exists())
+        self.assertTrue(templates_dir.joinpath("authenticated.html").is_file())
+        self.assertTrue(templates_dir.joinpath("can_comment.html").exists())
+        self.assertTrue(templates_dir.joinpath("can_comment.html").is_file())
+        self.assertTrue(templates_dir.joinpath("can_edit.html").exists())
+        self.assertTrue(templates_dir.joinpath("can_edit.html").is_file())
+        self.assertTrue(templates_dir.joinpath("create_view.html").exists())
+        self.assertTrue(templates_dir.joinpath("create_view.html").is_file())
+        self.assertTrue(templates_dir.joinpath("anonymous.html").exists())
+        self.assertTrue(templates_dir.joinpath("anonymous.html").is_file())
+
     def test_articles(self):
         templates_dir = self.dist / "articles"
         self.assertTrue(templates_dir.joinpath("article_list.html").exists())
@@ -53,20 +71,6 @@ class TestDistContents(unittest.TestCase):
         self.assertTrue(templates_dir.joinpath("signin_form.html").is_file())
         self.assertTrue(templates_dir.joinpath("signup_form.html").exists())
         self.assertTrue(templates_dir.joinpath("signup_form.html").is_file())
-
-    def test_sidebars(self):
-        templates_dir = self.dist / "_sidebars"
-
-        self.assertTrue(templates_dir.joinpath("authenticated.html").exists())
-        self.assertTrue(templates_dir.joinpath("authenticated.html").is_file())
-        self.assertTrue(templates_dir.joinpath("can_comment.html").exists())
-        self.assertTrue(templates_dir.joinpath("can_comment.html").is_file())
-        self.assertTrue(templates_dir.joinpath("can_edit.html").exists())
-        self.assertTrue(templates_dir.joinpath("can_edit.html").is_file())
-        self.assertTrue(templates_dir.joinpath("create_view.html").exists())
-        self.assertTrue(templates_dir.joinpath("create_view.html").is_file())
-        self.assertTrue(templates_dir.joinpath("anonymous.html").exists())
-        self.assertTrue(templates_dir.joinpath("anonymous.html").is_file())
 
 
 if __name__ == "__main__":
