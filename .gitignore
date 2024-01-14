@@ -11,6 +11,9 @@
 /venv/
 /env/
 
+# python byte-compiled
+__pycache__
+
 # distribution bundles directories
 /dist/
 
