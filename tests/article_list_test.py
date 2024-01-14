@@ -34,7 +34,7 @@ class TestArticleList(unittest.TestCase):
         test_server = Thread(target=cls.start_server, daemon=True)
         test_server.start()
 
-        cls.driver = webdriver.Chrome()
+        cls.driver = webdriver.Firefox()
         cls.driver.implicitly_wait(0.5)
 
     @classmethod
