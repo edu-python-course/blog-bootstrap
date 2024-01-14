@@ -38,7 +38,7 @@ module.exports = {
         }),
         new HTMLWebpackPlugin({
             template: path.resolve(__dirname, "src/views/partials/_sidebar.hbs"),
-            filename: "_sidebars/non-authenticated.html",
+            filename: "_sidebars/anonymous.html",
         }),
         new HTMLWebpackPlugin({
             template: path.resolve(__dirname, "src/views/partials/_sidebar.hbs"),

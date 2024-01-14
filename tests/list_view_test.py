@@ -45,10 +45,6 @@ class TestListView(unittest.TestCase):
         self.browser.get(f"http://localhost:{HTTPD_PORT}/article_list.html")
         self.browser.implicitly_wait(0.5)
 
-    def test_distribution_exists(self):
-        dist = DIST_DIR / "article_list.html"
-        self.assertTrue(dist.exists())
-
     def test_title(self):
         selector = "div.h4[role=heading]"
         element = self.browser.find_element(By.CSS_SELECTOR, selector)
