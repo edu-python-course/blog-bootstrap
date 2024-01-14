@@ -16,6 +16,11 @@ const autoprefixer = require("autoprefixer");
 const baseConfig = require("./webpack.config")
 const globals = require("./blog/globals")
 
+const sidebar_authenticated = {user:globals.user, authenticated:true}
+const sidebar_can_comment = {...sidebar_authenticated, can_comment:true}
+const sidebar_can_edit = {...sidebar_authenticated, can_edit:true}
+const sidebar_create_view = {...sidebar_authenticated, create_view:true}
+
 module.exports = {
     ...baseConfig,
     mode: "development",
@@ -30,6 +35,30 @@ module.exports = {
         new HTMLWebpackPlugin({
             template: path.resolve(__dirname, "src/views/_template.hbs"),
             filename: "base.html",
+        }),
+        new HTMLWebpackPlugin({
+            template: path.resolve(__dirname, "src/views/partials/_sidebar.hbs"),
+            filename: "_sidebars/non-authenticated.html",
+        }),
+        new HTMLWebpackPlugin({
+            template: path.resolve(__dirname, "src/views/partials/_sidebar.hbs"),
+            filename: "_sidebars/authenticated.html",
+            templateParameters: {...sidebar_authenticated}
+        }),
+        new HTMLWebpackPlugin({
+            template: path.resolve(__dirname, "src/views/partials/_sidebar.hbs"),
+            filename: "_sidebars/can_comment.html",
+            templateParameters: {...sidebar_can_comment}
+        }),
+        new HTMLWebpackPlugin({
+            template: path.resolve(__dirname, "src/views/partials/_sidebar.hbs"),
+            filename: "_sidebars/can_edit.html",
+            templateParameters: {...sidebar_can_edit}
+        }),
+        new HTMLWebpackPlugin({
+            template: path.resolve(__dirname, "src/views/partials/_sidebar.hbs"),
+            filename: "_sidebars/create_view.html",
+            templateParameters: {...sidebar_create_view}
         }),
         new HTMLWebpackPlugin({
             template: path.resolve(__dirname, "src/views/partials/list_main.hbs"),
