@@ -20,13 +20,18 @@
           <div class="col btn-group-vertical" role="group">
             {{#if can_comment}}
               <button class="btn btn-outline-dark"
-                      data-bs-toggle="modal" data-bs-target="#modalArticleComment">comment</button>
+                      data-bs-toggle="modal" data-bs-target="#modalArticleComment">comment
+              </button>
             {{/if}}
-            <a href="{{FormView}}" class="btn btn-outline-dark" role="button">create article</a>
+            <button class="btn btn-outline-dark" id="createArticleBtn" role="button">create article</button>
+            {{#if create_view}}
+              <a href="{{ListView}}" class="btn btn-outline-dark" role="button">cancel</a>
+            {{/if}}
             {{#if can_edit}}
               <a href="{{FormView}}" class="btn btn-outline-dark" role="button">update article</a>
               <button class="btn btn-danger"
-                      data-bs-toggle="modal" data-bs-target="#modalArticleDelete">delete article</button>
+                      data-bs-toggle="modal" data-bs-target="#modalArticleDelete">delete article
+              </button>
             {{/if}}
           </div>
         {{else}}
