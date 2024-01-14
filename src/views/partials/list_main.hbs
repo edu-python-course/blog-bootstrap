@@ -1,6 +1,6 @@
 <main class="col col-md-9" id="articlesContainer">
   <div class="h4 fst-italic" role="heading">Articles</div>
-  <section class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 position-relative"
+  <section class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 position-relative" aria-label="ArticlesList"
            data-masonry='{"percentPosition": true}'>
     {{>list_article
         ArticleTitle="To some, a cow is a tantra for hurting"
@@ -77,5 +77,18 @@
         ArticleTopics=(topics "Pirate Lingo")
         ArticleDate="August 27, 2023"
     }}
+  </section>
+  <section class="row row-cols-1" aria-label="Pagination">
+    <nav class="col d-flex justify-content-center">
+      <ul class="pagination">
+        <li class="page-item"><a href="" class="page-link disabled">Newer</a></li>
+        <li class="page-item"><a href="" class="page-link active">1</a></li>
+        <li class="page-item"><a href="" class="page-link">2</a></li>
+        <li class="page-item"><a href="" class="page-link">3</a></li>
+        <li class="page-item"><a href="" class="page-link">4</a></li>
+        <li class="page-item"><a href="" class="page-link">5</a></li>
+        <li class="page-item"><a href="" class="page-link">Older</a></li>
+      </ul>
+    </nav>
   </section>
 </main>
