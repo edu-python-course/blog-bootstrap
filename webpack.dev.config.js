@@ -28,6 +28,10 @@ module.exports = {
             "filename": "static/css/main.css"
         }),
         new HTMLWebpackPlugin({
+            template: path.resolve(__dirname, "src/views/_template.hbs"),
+            filename: "base.html",
+        }),
+        new HTMLWebpackPlugin({
             template: path.resolve(__dirname, "src/views/partials/list_main.hbs"),
             filename: "articles/article_list.html",
             chunks: [],
