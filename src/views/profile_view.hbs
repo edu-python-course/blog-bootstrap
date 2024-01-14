@@ -11,11 +11,11 @@
   <title>{{title}} | Blog Site</title>
 </head>
 <body>
-{{>partials/_header.hbs}}
+{{>partials/_header}}
 <div class="container">
   <div class="row">
-    {{>partials/profile_main.hbs can_edit=true}}
-    {{>partials/_sidebar.hbs authenticated=user}}
+    {{>partials/profile_main can_edit=true}}
+    {{>partials/_sidebar authenticated=user}}
   </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
