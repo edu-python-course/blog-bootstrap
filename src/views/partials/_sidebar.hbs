@@ -19,25 +19,25 @@
         {{#if authenticated }}
           <div class="col btn-group-vertical" role="group">
             {{#if can_comment}}
-              <button class="btn btn-outline-dark"
+              <button class="btn btn-outline-dark" id="commentArticleBtn"
                       data-bs-toggle="modal" data-bs-target="#modalArticleComment">comment
               </button>
             {{/if}}
             <a href="{{FormView}}" class="btn btn-outline-dark" id="createArticleBtn" role="button">create article</a>
             {{#if can_create}}
-              <a href="{{ListView}}" class="btn btn-outline-dark" role="button">cancel</a>
+              <a href="{{ListView}}" class="btn btn-outline-dark" id="cancelCreateArticleBtn" role="button">cancel</a>
             {{/if}}
             {{#if can_edit}}
-              <a href="{{FormView}}" class="btn btn-outline-dark" role="button">update article</a>
-              <button class="btn btn-danger"
+              <a href="{{FormView}}" class="btn btn-outline-dark" id="updateArticleBtn" role="button">update article</a>
+              <button class="btn btn-danger" id="deleteArticleBtn"
                       data-bs-toggle="modal" data-bs-target="#modalArticleDelete">delete article
               </button>
             {{/if}}
           </div>
         {{else}}
           <div class="col btn-group-vertical" role="group">
-            <a href="{{SignUpView}}" class="btn btn-outline-dark">register</a>
-            <a href="{{SignInView}}" class="btn btn-outline-dark">login</a>
+            <a href="{{SignUpView}}" id="signupAccountBtn" class="btn btn-outline-dark">register</a>
+            <a href="{{SignInView}}" id="signinAccountBtn" class="btn btn-outline-dark">login</a>
           </div>
         {{/if}}
       </section>
