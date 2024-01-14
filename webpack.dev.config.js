@@ -76,6 +76,7 @@ module.exports = {
             templateParameters: {
                 ...globals.templateParametersDevelopment,
                 navs: globals.refs.navs,
+                article: globals.article,
             }
         }),
         new HTMLWebpackPlugin({

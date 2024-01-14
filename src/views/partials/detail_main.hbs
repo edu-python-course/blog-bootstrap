@@ -2,12 +2,12 @@
   <article>
     <hr class="border">
     <h1 class="text-center my-2">{{article.title}}</h1>
-    <section class="d-flex flex-row justify-content-between" aria-label="ArticleMeta">
+    <section class="d-flex flex-row justify-content-between" aria-label="ArticleData">
       <div>
         <div>Published on <span>{{article.published}}</span> by</div>
         <div><a href="{{ProfileView}}" class="link-body-emphasis">{{article.author}}</a></div>
       </div>
-      <ul class="d-flex flex-row justify-content-end list-unstyled">
+      <ul class="d-flex flex-row justify-content-end list-unstyled" aria-label="ArticleTopics">
         {{#each article.topics }}
           <li class="fw-light ms-3">{{this}}</li>
         {{/each}}
