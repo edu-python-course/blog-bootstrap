@@ -31,6 +31,15 @@ module.exports = {
     plugins: [
         new MiniCSSExtractPlugin({"filename": "css/main.min.css"}),
         new HTMLWebpackPlugin({
+            template: path.resolve(__dirname, "src/views/about_view.hbs"),
+            filename: "about.html",
+            templateParameters: {
+                title: "About",
+                ...globals.templateParameters,
+                ...globals.refs,
+            }
+        }),
+        new HTMLWebpackPlugin({
             template: path.resolve(__dirname, "src/views/list_view.hbs"),
             filename: globals.refs.ListView,
             templateParameters: {

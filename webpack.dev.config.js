@@ -16,10 +16,10 @@ const autoprefixer = require("autoprefixer");
 const baseConfig = require("./webpack.config")
 const globals = require("./blog/globals")
 
-const sidebar_authenticated = {user:globals.user, authenticated:true}
-const sidebar_can_comment = {...sidebar_authenticated, can_comment:true}
-const sidebar_can_edit = {...sidebar_authenticated, can_edit:true}
-const sidebar_can_create = {...sidebar_authenticated, can_create:true}
+const sidebar_authenticated = {user: globals.user, authenticated: true}
+const sidebar_can_comment = {...sidebar_authenticated, can_comment: true}
+const sidebar_can_edit = {...sidebar_authenticated, can_edit: true}
+const sidebar_can_create = {...sidebar_authenticated, can_create: true}
 
 module.exports = {
     ...baseConfig,
@@ -59,6 +59,10 @@ module.exports = {
             template: path.resolve(__dirname, "src/views/partials/_sidebar.hbs"),
             filename: "_sidebars/create_view.html",
             templateParameters: {...sidebar_can_create}
+        }),
+        new HTMLWebpackPlugin({
+            template: path.resolve(__dirname, "src/views/about_view.hbs"),
+            filename: "about.html",
         }),
         new HTMLWebpackPlugin({
             template: path.resolve(__dirname, "src/views/partials/list_main.hbs"),
