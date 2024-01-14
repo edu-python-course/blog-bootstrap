@@ -23,8 +23,8 @@
                       data-bs-toggle="modal" data-bs-target="#modalArticleComment">comment
               </button>
             {{/if}}
-            <button class="btn btn-outline-dark" id="createArticleBtn" role="button">create article</button>
-            {{#if create_view}}
+            <a href="{{FormView}}" class="btn btn-outline-dark" id="createArticleBtn" role="button">create article</a>
+            {{#if can_create}}
               <a href="{{ListView}}" class="btn btn-outline-dark" role="button">cancel</a>
             {{/if}}
             {{#if can_edit}}
