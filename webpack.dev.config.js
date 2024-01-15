@@ -14,7 +14,7 @@ const MiniCSSExtractPlugin = require("mini-css-extract-plugin")
 const HTMLWebpackPlugin = require("html-webpack-plugin")
 const autoprefixer = require("autoprefixer");
 const baseConfig = require("./webpack.config")
-const globals = require("./blog/globals")
+const globals = require("./src/globals")
 
 const sidebar_authenticated = {user: globals.user, authenticated: true}
 const sidebar_can_comment = {...sidebar_authenticated, can_comment: true}
@@ -149,7 +149,7 @@ module.exports = {
                 test: /\.hbs$/,
                 loader: "handlebars-loader",
                 options: {
-                    helperDirs: path.join(__dirname, "blog/helpers"),
+                    helperDirs: path.join(__dirname, "src/helpers"),
                     precompileOptions: {
                         knownHelpersOnly: false,
                     }
