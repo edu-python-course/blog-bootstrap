@@ -1,4 +1,4 @@
-name: Build dist for release
+name: Upload distribution to release
 
 on:
   release:
@@ -6,8 +6,55 @@ on:
       - published
 
 jobs:
-  deploy:
+  jest:
     runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v4
+
+      - name: Setup NodeJs
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Test code with Jest
+        run: npm run test
+
+  pytest:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v4
+
+      - name: Setup NodeJs
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          npm install
+          pip install -r requirements.txt
+
+      - name: Build the dist
+        run: npm run build:dev
+
+      - name: Test distribution with Selenium
+        run: pytest
+
+  upload:
+    runs-on: ubuntu-latest
+    needs: [jest, pytest]
 
     steps:
       - name: Checkout
