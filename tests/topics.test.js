@@ -1,4 +1,4 @@
-const topics = require("../blog/helpers/topics")
+const topics = require("../src/helpers/topics")
 
 describe("Test topics handlebars helper", () => {
     it("single topic supported", () => {

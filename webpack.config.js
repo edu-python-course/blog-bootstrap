@@ -12,7 +12,7 @@ const path = require("path")
 const autoprefixer = require("autoprefixer")
 const HTMLWebpackPlugin = require("html-webpack-plugin")
 const MiniCSSExtractPlugin = require("mini-css-extract-plugin")
-const globals = require("./blog/globals")
+const globals = require("./src/globals")
 
 // webpack config object
 // noinspection WebpackConfigHighlighting
@@ -135,7 +135,7 @@ module.exports = {
                 test: /\.hbs$/,
                 loader: "handlebars-loader",
                 options: {
-                    helperDirs: path.join(__dirname, "blog/helpers"),
+                    helperDirs: path.join(__dirname, "src/helpers"),
                     precompileOptions: {
                         knownHelpersOnly: false,
                     }
