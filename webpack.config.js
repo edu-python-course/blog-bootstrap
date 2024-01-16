@@ -73,6 +73,17 @@ module.exports = {
                 user,
             }
         }),
+                new HTMLWebpackPlugin({
+            template: path.resolve(__dirname, "src/views/topics_view.hbs"),
+            filename: refs.TopicsView,
+            templateParameters: {
+                ...statics,
+                ...refs,
+                title: "Subscriptions",
+                topics,
+                user,
+            }
+        }),
         new HTMLWebpackPlugin({
             template: path.resolve(__dirname, "src/views/profile_view.hbs"),
             filename: refs.ProfileView,
