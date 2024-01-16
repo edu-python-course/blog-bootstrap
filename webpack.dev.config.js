@@ -39,27 +39,38 @@ module.exports = {
             templateParameters: {topics}
         }),
         new HTMLWebpackPlugin({
+            template: path.resolve(__dirname, "src/views/partials/_header.hbs"),
+            filename: "_navbar.html",
+            chunks: [],
+            templateParameters: {topics},
+        }),
+        new HTMLWebpackPlugin({
             template: path.resolve(__dirname, "src/views/partials/_sidebar.hbs"),
             filename: "_sidebars/anonymous.html",
+            chunks: [],
         }),
         new HTMLWebpackPlugin({
             template: path.resolve(__dirname, "src/views/partials/_sidebar.hbs"),
             filename: "_sidebars/authenticated.html",
+            chunks: [],
             templateParameters: {...sidebar_authenticated}
         }),
         new HTMLWebpackPlugin({
             template: path.resolve(__dirname, "src/views/partials/_sidebar.hbs"),
             filename: "_sidebars/can_comment.html",
+            chunks: [],
             templateParameters: {...sidebar_can_comment}
         }),
         new HTMLWebpackPlugin({
             template: path.resolve(__dirname, "src/views/partials/_sidebar.hbs"),
             filename: "_sidebars/can_edit.html",
+            chunks: [],
             templateParameters: {...sidebar_can_edit}
         }),
         new HTMLWebpackPlugin({
             template: path.resolve(__dirname, "src/views/partials/_sidebar.hbs"),
             filename: "_sidebars/create_view.html",
+            chunks: [],
             templateParameters: {...sidebar_can_create}
         }),
         new HTMLWebpackPlugin({
