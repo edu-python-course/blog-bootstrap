@@ -44,6 +44,7 @@ module.exports = {
             filename: globals.refs.ListView,
             templateParameters: {
                 title: "All Articles",
+                topics: globals.topics,
                 ...globals.templateParameters,
                 ...globals.refs,
             }
