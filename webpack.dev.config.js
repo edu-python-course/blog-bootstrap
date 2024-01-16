@@ -42,7 +42,7 @@ module.exports = {
             template: path.resolve(__dirname, "src/views/partials/_header.hbs"),
             filename: "_navbar.html",
             chunks: [],
-            templateParameters: {topics},
+            templateParameters: {...statics_dev, topics},
         }),
         new HTMLWebpackPlugin({
             template: path.resolve(__dirname, "src/views/partials/_sidebar.hbs"),
@@ -82,7 +82,7 @@ module.exports = {
             filename: "articles/article_list.html",
             chunks: [],
             templateParameters: {
-                statics_dev,
+                ...statics_dev,
                 topics,
             }
         }),
