@@ -48,6 +48,15 @@
           Our goal is to provide you with valuable insights, secure web solutions, and a seamless
           user experience. <a href="{{AboutView}}" class="link-body-emphasis">See more...</a>
         </p>
+        {{#if authenticated}}
+          <section class="row row-cols-1 justify-content-center">
+            <div class="h4 fst-italic">Subscriptions</div>
+            <p class="text-body">
+              Manage your <a href="{{TopicsView}}" class="link-body-emphasis">subscriptions</a> to receive updates
+              on your favourite topics.
+            </p>
+          </section>
+        {{/if}}
       </section>
     </div>
   </div>

@@ -36,6 +36,7 @@ module.exports = {
         new HTMLWebpackPlugin({
             template: path.resolve(__dirname, "src/views/_template.hbs"),
             filename: "base.html",
+            templateParameters: {topics}
         }),
         new HTMLWebpackPlugin({
             template: path.resolve(__dirname, "src/views/partials/_sidebar.hbs"),

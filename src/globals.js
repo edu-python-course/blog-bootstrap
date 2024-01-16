@@ -31,7 +31,7 @@ const user = {
 // noinspection SpellCheckingInspection
 const topics = [
     {
-        subscribed: true,
+        subscribed: false,
         title: "Fake Latin",
         description: "A falsis, idoleum teres turpis. " +
             "Emeritis, audax historias sapienter reperire de barbatus, talis palus. " +
@@ -46,14 +46,14 @@ const topics = [
         link: "?query=esoteric-wisdom",
     },
     {
-        subscribed: true,
+        subscribed: false,
         title: "Culinary Inspiration",
         description: "Oysters taste best with olive oil and lots of wasabi. " +
             "Marshmellow can be marinateed with sichuan-style walnut, also try whisking the soup with condensed milk.",
         link: "?query=culinary-inspirations",
     },
     {
-        subscribed: true,
+        subscribed: false,
         title: "Pirate Lingo",
         description: "All captains view dark, golden golds. Lord, lively gold. go to tubbataha reef. " +
             "The mainland endures with grace, haul the galley before it sings.",
@@ -125,6 +125,7 @@ const refs = {
     SignInView: "./sign-in.html",
     SignUpView: "./sign-up.html",
     ProfileView: "./profile.html",
+    TopicsView: "./topics.html",
 }
 
 module.exports = {

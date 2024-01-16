@@ -1,0 +1,13 @@
+<main class="col col-md-9" id="topicsContainer">
+  <div class="h4 fst-italic" role="heading">Topics</div>
+  <ul class="list-group" role="list">
+    {{# each topics }}
+      <li class="list-group-item list-group-item list-group-item-action
+                {{#if this.subscribed}}list-group-item-secondary{{/if}}"
+          role="listitem">
+        <h2>{{this.title}}</h2>
+        <p class="text-body">{{this.description}}</p>
+      </li>
+    {{/each}}
+  </ul>
+</main>

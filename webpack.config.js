@@ -37,6 +37,7 @@ module.exports = {
                 ...statics,
                 ...refs,
                 title: "About",
+                topics,
             }
         }),
         new HTMLWebpackPlugin({
@@ -58,6 +59,7 @@ module.exports = {
                 title: "Article Details",
                 article,
                 user,
+                topics,
             }
         }),
         new HTMLWebpackPlugin({
@@ -67,6 +69,18 @@ module.exports = {
                 ...statics,
                 ...refs,
                 title: "Article Form",
+                topics,
+                user,
+            }
+        }),
+                new HTMLWebpackPlugin({
+            template: path.resolve(__dirname, "src/views/topics_view.hbs"),
+            filename: refs.TopicsView,
+            templateParameters: {
+                ...statics,
+                ...refs,
+                title: "Subscriptions",
+                topics,
                 user,
             }
         }),
@@ -78,6 +92,7 @@ module.exports = {
                 ...refs,
                 title: "User Profile",
                 user,
+                topics,
             }
         }),
         new HTMLWebpackPlugin({
@@ -87,6 +102,7 @@ module.exports = {
                 ...statics,
                 ...refs,
                 title: "Sign In",
+                topics,
             }
         }),
         new HTMLWebpackPlugin({
@@ -96,6 +112,7 @@ module.exports = {
                 ...statics,
                 ...refs,
                 title: "Sign Up",
+                topics,
             }
         }),
     ],
