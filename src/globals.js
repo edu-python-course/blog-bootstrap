@@ -4,7 +4,7 @@
 
 const BlogSiteTitle = "Blog Templates"
 
-const templateParameters = {
+const statics = {
     favicon_svg: "./img/favicon.svg",
     favicon_png: "./img/favicon.png",
     anonymous_img: "./img/anonymous.svg",
@@ -12,8 +12,8 @@ const templateParameters = {
     BlogSiteTitle,
 }
 
-const templateParametersDevelopment = {
-    ...templateParameters,
+const statics_dev = {
+    ...statics,
     favicon_svg: "./static/img/favicon.svg",
     favicon_png: "./static/img/favicon.png",
     anonymous_img: "./static/img/anonymous.svg",
@@ -128,8 +128,8 @@ const refs = {
 }
 
 module.exports = {
-    templateParametersDevelopment,
-    templateParameters,
+    statics_dev,
+    statics,
     article,
     user,
     refs,
