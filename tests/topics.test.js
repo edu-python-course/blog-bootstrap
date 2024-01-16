@@ -1,11 +1,11 @@
-const topics = require("../src/helpers/topics")
+const iter_topics = require("../src/helpers/iter_topics")
 
 describe("Test topics handlebars helper", () => {
     it("single topic supported", () => {
-        expect(topics("Epos fuga")).toEqual["Epos fuga"]
+        expect(iter_topics("Epos fuga")).toEqual["Epos fuga"]
     })
     it("leading and trailing spaces are trimmed for single topic", () => {
-        expect(topics("  Nuptia resisteres  ")).toEqual(["Nuptia resisteres"])
+        expect(iter_topics("  Nuptia resisteres  ")).toEqual(["Nuptia resisteres"])
     });
     it("topics are split into array", () => {
         const origin = "Cur burgus mori;Ubi est secundus byssus"
@@ -13,7 +13,7 @@ describe("Test topics handlebars helper", () => {
             "Cur burgus mori",
             "Ubi est secundus byssus"
         ]
-        expect(topics(origin)).toEqual(expected)
+        expect(iter_topics(origin)).toEqual(expected)
     });
     it("leading and trailing spaces are removed", () => {
         const origin = "Festus orexis ; Diligenter tractares ; Bulla est."
@@ -22,6 +22,6 @@ describe("Test topics handlebars helper", () => {
             "Diligenter tractares",
             "Bulla est."
         ]
-        expect(topics(origin)).toEqual(expected)
+        expect(iter_topics(origin)).toEqual(expected)
     });
 })
