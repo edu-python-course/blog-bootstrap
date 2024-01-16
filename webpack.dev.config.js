@@ -14,9 +14,10 @@ const MiniCSSExtractPlugin = require("mini-css-extract-plugin")
 const HTMLWebpackPlugin = require("html-webpack-plugin")
 const autoprefixer = require("autoprefixer");
 const baseConfig = require("./webpack.config")
-const globals = require("./src/globals")
+const {statics_dev, refs, article, user, topics} = require("./src/globals")
 
-const sidebar_authenticated = {user: globals.user, authenticated: true}
+
+const sidebar_authenticated = {user, authenticated: true}
 const sidebar_can_comment = {...sidebar_authenticated, can_comment: true}
 const sidebar_can_edit = {...sidebar_authenticated, can_edit: true}
 const sidebar_can_create = {...sidebar_authenticated, can_create: true}
@@ -69,8 +70,8 @@ module.exports = {
             filename: "articles/article_list.html",
             chunks: [],
             templateParameters: {
-                ...globals.templateParametersDevelopment,
-                navs: globals.refs.navs,
+                statics_dev,
+                topics,
             }
         }),
         new HTMLWebpackPlugin({
@@ -78,9 +79,9 @@ module.exports = {
             filename: "articles/article_detail.html",
             chunks: [],
             templateParameters: {
-                ...globals.templateParametersDevelopment,
-                navs: globals.refs.navs,
-                article: globals.article,
+                ...statics_dev,
+                topics,
+                article,
             }
         }),
         new HTMLWebpackPlugin({
@@ -88,8 +89,8 @@ module.exports = {
             filename: "articles/article_form.html",
             chunks: [],
             templateParameters: {
-                ...globals.templateParametersDevelopment,
-                navs: globals.refs.navs,
+                ...statics_dev,
+                navs: refs.navs,
             }
         }),
         new HTMLWebpackPlugin({
@@ -97,8 +98,8 @@ module.exports = {
             filename: "auth/signin_form.html",
             chunks: [],
             templateParameters: {
-                ...globals.templateParametersDevelopment,
-                navs: globals.refs.navs,
+                ...statics_dev,
+                topics,
             }
         }),
         new HTMLWebpackPlugin({
@@ -106,8 +107,8 @@ module.exports = {
             filename: "auth/signup_form.html",
             chunks: [],
             templateParameters: {
-                ...globals.templateParametersDevelopment,
-                navs: globals.refs.navs,
+                ...statics_dev,
+                topics,
             }
         }),
         new HTMLWebpackPlugin({
@@ -115,8 +116,8 @@ module.exports = {
             filename: "users/profile.html",
             chunks: [],
             templateParameters: {
-                ...globals.templateParametersDevelopment,
-                navs: globals.refs.navs,
+                ...statics_dev,
+                topics,
             }
         }),
     ],

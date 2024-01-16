@@ -4,7 +4,7 @@
 
 const BlogSiteTitle = "Blog Templates"
 
-const templateParameters = {
+const statics = {
     favicon_svg: "./img/favicon.svg",
     favicon_png: "./img/favicon.png",
     anonymous_img: "./img/anonymous.svg",
@@ -12,8 +12,8 @@ const templateParameters = {
     BlogSiteTitle,
 }
 
-const templateParametersDevelopment = {
-    ...templateParameters,
+const statics_dev = {
+    ...statics,
     favicon_svg: "./static/img/favicon.svg",
     favicon_png: "./static/img/favicon.png",
     anonymous_img: "./static/img/anonymous.svg",
@@ -27,6 +27,46 @@ const user = {
     first_name: "Pippin",
     last_name: "Sackville-Baggins",
 }
+
+// noinspection SpellCheckingInspection
+const topics = [
+    {
+        subscribed: true,
+        title: "Fake Latin",
+        description: "A falsis, idoleum teres turpis. " +
+            "Emeritis, audax historias sapienter reperire de barbatus, talis palus. " +
+            "Cum era observare, omnes nutrixes promissio velox, superbus rectores.",
+        link: "?query=fake-latin",
+    },
+    {
+        subscribed: true,
+        title: "Esoteric Wisdom",
+        description: "Never acquire the karma, for you cannot discover it. " +
+            "The hypnosis of your mans will die purely when you illuminate that extend is the seeker.",
+        link: "?query=esoteric-wisdom",
+    },
+    {
+        subscribed: true,
+        title: "Culinary Inspiration",
+        description: "Oysters taste best with olive oil and lots of wasabi. " +
+            "Marshmellow can be marinateed with sichuan-style walnut, also try whisking the soup with condensed milk.",
+        link: "?query=culinary-inspirations",
+    },
+    {
+        subscribed: true,
+        title: "Pirate Lingo",
+        description: "All captains view dark, golden golds. Lord, lively gold. go to tubbataha reef. " +
+            "The mainland endures with grace, haul the galley before it sings.",
+        link: "?query=pirate-lingo",
+    },
+    {
+        subscribed: true,
+        title: "Science Fiction",
+        description: "Tremble without attitude, and we won’t beam a particle. " +
+            "Alignment at the solar system was the stigma of nuclear flux, beamed to a brave vogon.",
+        link: "?query=science-fiction",
+    },
+]
 
 const article = {
     title: "Ship-wide, carnivorous crews impressively deserve an extraterrestrial, devastated ferengi",
@@ -77,29 +117,21 @@ const article = {
     ]
 }
 
-const
-    refs = {
-        AboutView: "./about.html",
-        ListView: "./index.html",
-        DetailView: "./detail.html",
-        FormView: "./form.html",
-        SignInView: "./sign-in.html",
-        SignUpView: "./sign-up.html",
-        ProfileView: "./profile.html",
-
-        navs: [
-            {link: "?query=fake-latin", title: "Fake Latin"},
-            {link: "?query=esoteric-wisdom", title: "Esoteric Wisdom"},
-            {link: "?query=culinary-inspirations", title: "Culinary Inspirations"},
-            {link: "?query=pirate-lingo", title: "Pirate Lingo"},
-            {link: "?query=science-fiction", title: "Science Fiction"},
-        ],
-    }
+const refs = {
+    AboutView: "./about.html",
+    ListView: "./index.html",
+    DetailView: "./detail.html",
+    FormView: "./form.html",
+    SignInView: "./sign-in.html",
+    SignUpView: "./sign-up.html",
+    ProfileView: "./profile.html",
+}
 
 module.exports = {
-    templateParametersDevelopment,
-    templateParameters,
+    statics_dev,
+    statics,
     article,
     user,
     refs,
+    topics,
 }

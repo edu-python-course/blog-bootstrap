@@ -12,7 +12,7 @@ const path = require("path")
 const autoprefixer = require("autoprefixer")
 const HTMLWebpackPlugin = require("html-webpack-plugin")
 const MiniCSSExtractPlugin = require("mini-css-extract-plugin")
-const globals = require("./src/globals")
+const {statics, refs, article, user, topics} = require("./src/globals")
 
 // webpack config object
 // noinspection WebpackConfigHighlighting
@@ -32,69 +32,70 @@ module.exports = {
         new MiniCSSExtractPlugin({"filename": "css/main.min.css"}),
         new HTMLWebpackPlugin({
             template: path.resolve(__dirname, "src/views/about_view.hbs"),
-            filename: "about.html",
+            filename: refs.AboutView,
             templateParameters: {
+                ...statics,
+                ...refs,
                 title: "About",
-                ...globals.templateParameters,
-                ...globals.refs,
             }
         }),
         new HTMLWebpackPlugin({
             template: path.resolve(__dirname, "src/views/list_view.hbs"),
-            filename: globals.refs.ListView,
+            filename: refs.ListView,
             templateParameters: {
+                ...statics,
+                ...refs,
                 title: "All Articles",
-                ...globals.templateParameters,
-                ...globals.refs,
+                topics,
             }
         }),
         new HTMLWebpackPlugin({
             template: path.resolve(__dirname, "src/views/detail_view.hbs"),
-            filename: globals.refs.DetailView,
+            filename: refs.DetailView,
             templateParameters: {
+                ...statics,
+                ...refs,
                 title: "Article Details",
-                article: globals.article,
-                ...globals.templateParameters,
-                ...globals.refs,
-                user: globals.user,
+                article,
+                user,
             }
         }),
         new HTMLWebpackPlugin({
             template: path.resolve(__dirname, "src/views/form_view.hbs"),
-            filename: globals.refs.FormView,
+            filename: refs.FormView,
             templateParameters: {
+                ...statics,
+                ...refs,
                 title: "Article Form",
-                ...globals.templateParameters,
-                ...globals.refs,
-                user: globals.user,
+                user,
             }
         }),
         new HTMLWebpackPlugin({
             template: path.resolve(__dirname, "src/views/profile_view.hbs"),
-            filename: globals.refs.ProfileView,
+            filename: refs.ProfileView,
             templateParameters: {
+                ...statics,
+                ...refs,
                 title: "User Profile",
-                ...globals.templateParameters,
-                ...globals.refs,
-                user: globals.user,
+                user,
             }
         }),
         new HTMLWebpackPlugin({
             template: path.resolve(__dirname, "src/views/signin_view.hbs"),
-            filename: globals.refs.SignInView,
+            filename: refs.SignInView,
             templateParameters: {
-                title: globals.refs.SignInView,
-                ...globals.templateParameters,
-                ...globals.refs,
+                ...statics,
+                ...refs,
+                title: "Sign In",
             }
         }),
         new HTMLWebpackPlugin({
             template: path.resolve(__dirname, "src/views/signup_view.hbs"),
-            filename: globals.refs.SignUpView,
+            filename: refs.SignUpView,
             templateParameters: {
+                ...statics,
+                ...refs,
                 title: "Sign Up",
-                ...globals.templateParameters,
-                ...globals.refs,
             }
         }),
     ],
