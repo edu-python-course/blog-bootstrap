@@ -1,0 +1,22 @@
+<div class="container">
+  <header class="lh-1 py-3">
+    <div class="row d-flex justify-content-between align-items-center text-center">
+      <div class="col-2 col-md-3 col-lg-4">
+        <img src="{{logo}}" alt="Site logo" class="logo" id="headerLogoLeft">
+      </div>
+      <div class="col text-capitalize">
+        <a href="{{ListView}}" class="site-title text-dark">{{BlogSiteTitle}}</a>
+      </div>
+      <div class="col-2 col-sm-2 col-md-3 col-lg-4">
+        <img src="{{logo}}" alt="Site logo" class="logo" id="headerLogoRight">
+      </div>
+    </div>
+  </header>
+  <div class="nav-scroller py-1" role="list">
+    <nav class="nav d-flex justify-content-between">
+      {{#each topics}}
+        <a href="{{this.link}}" class="nav-item nav-link link-body-emphasis">{{this.title}}</a>
+      {{/each}}
+    </nav>
+  </div>
+</div>

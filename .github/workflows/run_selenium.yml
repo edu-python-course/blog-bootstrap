@@ -1,0 +1,36 @@
+name: Test distribution with Selenium
+
+on:
+  pull_request:
+    branches:
+      - master
+      - devel
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v4
+
+      - name: Setup NodeJs
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          npm install
+          pip install -r requirements.txt
+
+      - name: Build the dist
+        run: npm run build:dev
+
+      - name: Test distribution with Selenium
+        run: pytest

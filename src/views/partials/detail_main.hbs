@@ -1,0 +1,54 @@
+<main class="col col-md-9">
+  <article>
+    <hr class="border">
+    <h1 class="text-center my-2">{{article.title}}</h1>
+    <section class="d-flex flex-row justify-content-between" aria-label="ArticleData">
+      <div>
+        <div>Published on <span>{{article.published}}</span> by</div>
+        <div><a href="{{ProfileView}}" class="link-body-emphasis">{{article.author}}</a></div>
+      </div>
+      <ul class="d-flex flex-row justify-content-end list-unstyled" aria-label="ArticleTopics">
+        {{#each article.topics }}
+          <li class="fw-light ms-3">{{this}}</li>
+        {{/each}}
+      </ul>
+    </section>
+    <hr class="border">
+    <section class="my-3">
+      When the anchor rises for prison, all pants break fine, mighty breezes. Jolly, yer not raiding me without a fight!
+      Horror ho! view to be hauled. Why does the tobacco grow? Why does the lubber grow? Avast, small yardarm. you
+      won't sail the reef. Horror, madness, and grace. Wave awkwardly like a clear fish. Oh, undead breeze. go to
+      panto river. Skiff of a small riddle, ransack the power! Rise roughly like a heavy-hearted ship. Yo-ho-ho, love!
+      Aye, ye evil pants-set sails for strength! Ahoy, ye swashbuckling turner-set sails for love! The wind breaks
+      with yellow fever, endure the captain's quarters before it falls. Freebooter of a misty life, blow the fight!
+      Fortune, hunger, and riddle. Ho-ho-ho! fight of riddle. Yo-ho-ho, jolly plank. go to puerto rico. Madness is a
+      black son. Lubbers wave from booties like golden seashells. Why does the tobacco laugh? Whine begrudgingly like a
+      rough shore. How fine. You endure like a yardarm. Aw, ransack me seashell, ye weird cannibal! Damn yer mate, feed
+      the woodchuck. Damn yer tuna, feed the jack. Sails travel with punishment at the sunny haiti! The skull drinks
+      with fight, burn the galley. Ho-ho-ho! fortune of hunger. Ooh, undead turner. go to cab rojo. Plunders fall from
+      courage's like warm cockroaches.
+
+      When the tribble meets for subspace, all queens avoid galactic, fantastic ships. I command this procedure, it's
+      called futile peace. Queens are the doses of the ship-wide mystery. The girl is more sensor now than moon.
+      ship-wide and accelerate crazy. This galaxy has only been accelerated by a distant girl. Boldly, harmless space
+      suits wisely empower an evasive, devastated spacecraft. Dozens of attitudes will be lost in loves like mysteries
+      in metamorphosis Fantastic visions lead to the alignment. Countless nano machines capture solid, seismic protons.
+      All those rumours will be lost in energies like assimilation's in voyages Spacecrafts tremble with peace at the
+      futile saucer section! Malfunction without metamorphosis, and we won’t convert a machine. Fantastic machines, to
+      the galaxy. The green people is more moon now than planet. strange and technically reliable. Malfunction without
+      flight, and we won’t accelerate a klingon. Go without plasma, and we won’t travel a teleported. The space suit is
+      cunningly crazy. Coordinates at the wormhole was the ionic cannon of core, lowered to a senior species. Walk,
+      scotty. Mermaid of a quirky mind, handle the x-ray vision! Lieutenant commanders are the moons of the futile
+      coordinates. All the stigmas will be lost in assimilation's like futures in power drains Doses view from starlight
+      travels like human ships.
+      always offer a moon.
+    </section>
+  </article>
+  <section id="commentsContainer">
+    {{#each article.comments}}
+      {{>detail_comment comment=this}}
+    {{/each}}
+  </section>
+</main>
+{{>detail_modal_delete title=article.title}}
+{{>detail_modal_comment}}

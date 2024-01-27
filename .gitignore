@@ -5,11 +5,22 @@
 # node modules
 /node_modules/
 
+# python virtual environment
+/.venv/
+/.env/
+/venv/
+/env/
+
+# python byte-compiled
+__pycache__
+
+# distribution bundles directories
+/dist/
+
 # bootstrap source may be required for autocomplite,
 # but they aren't part of current repository content
-/css/bootstrap-*.*
-/css/bootstrap.*
-/js/bootstrap.*
+bootstrap-*.*
+bootstrap.*
 
 # emacs caches and backup files
 \#*\#

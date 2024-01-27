@@ -1,0 +1,63 @@
+<aside class="col-md-3" aria-label="Sidebar">
+  <div class="sticky-top">
+    <div class="ps-4">
+      <div class="h4 fst-italic" role="heading">Account</div>
+      <section class="row row-cols-1 justify-content-center" aria-label="AuthenticatedUser"
+               aria-description="Authenticated user information">
+        {{#if authenticated }}
+          <img src="{{user.image}}" alt="avatar"
+               class="col rounded-circle p-2 avatar">
+          <div class="col text-center">
+            <a href="{{ProfileView}}" class="h5 fst-italic">{{user.first_name}} {{user.last_name}}</a>
+          </div>
+        {{else}}
+          <img src="{{anonymous_img}}" alt="avatar"
+               class="col rounded-circle p-2 avatar">
+        {{/if}}
+      </section>
+      <section class="row row-cols-1 justify-content-center" aria-label="UserActions">
+        {{#if authenticated }}
+          <div class="col btn-group-vertical" role="group">
+            {{#if can_comment}}
+              <button class="btn btn-outline-dark" id="commentArticleBtn"
+                      data-bs-toggle="modal" data-bs-target="#modalArticleComment">comment
+              </button>
+            {{/if}}
+            <a href="{{FormView}}" class="btn btn-outline-dark" id="createArticleBtn" role="button">create article</a>
+            {{#if can_create}}
+              <a href="{{ListView}}" class="btn btn-outline-dark" id="cancelCreateArticleBtn" role="button">cancel</a>
+            {{/if}}
+            {{#if can_edit}}
+              <a href="{{FormView}}" class="btn btn-outline-dark" id="updateArticleBtn" role="button">update article</a>
+              <button class="btn btn-danger" id="deleteArticleBtn"
+                      data-bs-toggle="modal" data-bs-target="#modalArticleDelete">delete article
+              </button>
+            {{/if}}
+          </div>
+        {{else}}
+          <div class="col btn-group-vertical" role="group">
+            <a href="{{SignUpView}}" id="signupAccountBtn" class="btn btn-outline-dark">register</a>
+            <a href="{{SignInView}}" id="signinAccountBtn" class="btn btn-outline-dark">login</a>
+          </div>
+        {{/if}}
+      </section>
+      <section class="row row-cols-1 justify-content-center" aria-label="About"
+               aria-description="A reference to static the static content page">
+        <div class="h4 fst-italic" role="heading">About</div>
+        <p class="text-body">
+          Our goal is to provide you with valuable insights, secure web solutions, and a seamless
+          user experience. <a href="{{AboutView}}" class="link-body-emphasis">See more...</a>
+        </p>
+        {{#if authenticated}}
+          <section class="row row-cols-1 justify-content-center">
+            <div class="h4 fst-italic">Subscriptions</div>
+            <p class="text-body">
+              Manage your <a href="{{TopicsView}}" class="link-body-emphasis">subscriptions</a> to receive updates
+              on your favourite topics.
+            </p>
+          </section>
+        {{/if}}
+      </section>
+    </div>
+  </div>
+</aside>
